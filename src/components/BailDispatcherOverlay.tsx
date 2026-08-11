@@ -99,11 +99,25 @@ export default function BailDispatcherOverlay({ onClose }: BailDispatcherOverlay
       }, 600);
     } else {
       setIsComplete(true);
+      // Automatically send notification to Jody via email API
+      fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: newIntake.requesterName || "Express Dispatch User",
+          phone: newIntake.requesterPhone || "Not provided",
+          email: "dispatch-lead@jstorybailbonds.com",
+          county: newIntake.county || "Missouri",
+          inmateName: newIntake.defendantName || "Not provided",
+          message: `[EXPRESS DISPATCHER LEAD]\nInmate/Defendant: ${newIntake.defendantName}\nCounty/Jail: ${newIntake.county}\nEstimated Bond: ${newIntake.bondAmount}\nRequester Name: ${newIntake.requesterName}\nCallback Phone: ${newIntake.requesterPhone}`
+        })
+      }).catch(err => console.error("Error auto-notifying Jody from dispatcher:", err));
+
       setTimeout(() => {
         setMessages(prev => [...prev, {
           id: (Date.now() + 1).toString(),
           type: 'bot',
-          text: "Intake Complete. Click below to instantly notify our dispatch team on their mobile devices."
+          text: "Intake Complete! Your request has been dispatched directly to Jody Story's notifications. Click below to also call or text our agent directly."
         }]);
       }, 600);
     }

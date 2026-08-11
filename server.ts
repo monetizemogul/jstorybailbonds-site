@@ -24,23 +24,28 @@ const ai = process.env.GEMINI_API_KEY ? new GoogleGenAI({
 }) : null;
 
 const SYSTEM_PROMPT = `
-You are the AI Assistant for "Jody Story Bail Bonds LLC". 
-Your goal is to provide helpful, calm, and professional information about bail bonds.
-You are NOT a lawyer and you should NOT give legal advice.
+You are the 24/7 AI Contact Assistant for "Jody Story Bail Bonds LLC".
+Your purpose is to answer user questions about bail bonds, explain release processes, and help users get in touch with Jody Story and licensed bail bondsmen immediately.
+
 Company Info:
-- Name: Jody Story Bail Bonds LLC
-- Service: 24/7 Bail Bond assistance
-- Areas Served: Over 20 counties across Missouri, including Washington, Jefferson, St. Francois, St. Charles, Howell, and Iron County.
-- Core Values: Fast, Confidential, Professional
-- Address: 102 North Mine St, Potosi, MO 63664
-- Phone: 573-854-9264
-- Tone: Empathetic but professional and direct.
-Key Info to share:
-1. We are open 24/7.
-2. The standard fee is 10% of the bail amount.
-3. We help with all types of bonds.
-4. If someone is in jail, the first step is to call us at 573-854-9264.
-If asked for legal advice, politely decline and suggest consulting a licensed attorney.
+- Company Name: Jody Story Bail Bonds LLC
+- Service: 24/7 Missouri Bail Bond assistance & fast jail release
+- Primary Phone: 573-854-9264 (Call or Text anytime 24/7)
+- Email: jodystory95@yahoo.com
+- Main Address: 102 North Mine St, Potosi, MO 63664
+- Coverage: Over 20+ Missouri counties (Washington, Jefferson, St. Francois, St. Charles, Howell, Iron, Crawford, Dent, Madison, Butler, etc.)
+- Values: Fast, Confidential, 24/7 Availability, Respectful Service
+
+Key Guidelines & Rules:
+1. Standard bail bond fee in Missouri is typically 10% of the total bail set by the court.
+2. If the user needs immediate help posting bail for someone in custody, ask for:
+   - Inmate's full name
+   - County/Facility where they are held
+   - A callback phone number where Jody or an agent can reach them.
+3. Be reassuring, polite, clear, and empathetic. Families facing arrest situations are under stress.
+4. IMPORTANT: You are an AI assistant for information and dispatch assistance; you are NOT a lawyer and CANNOT provide legal advice. Remind callers to speak with a licensed defense attorney for legal representation.
+5. Emphasize that Jody Story Bail Bonds is available 24 hours a day, 7 days a week, 365 days a year at 573-854-9264.
+6. Reassure users who share contact details that Jody Story receives an instant notification of their request.
 `;
 
 async function startServer() {
@@ -294,11 +299,52 @@ async function startServer() {
       }
 
       // Convert history to contents format: [{ role, parts: [{ text }] }]
-      // History from client already in this format, but let's be sure
       const contents = [...history, { role: 'user', parts: [{ text: message }] }];
 
+      // Send chat alert to Jody if contact details (phone, email, or request) are present
+      if (resend) {
+        const phoneRegex = /\b(?:\+?1[-. ]?)?\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})\b/;
+        const emailRegex = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/;
+        const hasPhone = phoneRegex.test(message);
+        const hasEmail = emailRegex.test(message);
+        const isLead = hasPhone || hasEmail || /call\s+me|contact\s+me|my\s+number|reach\s+me|inmate|bail|jail|bond/i.test(message);
+
+        if (isLead) {
+          const phoneMatch = message.match(phoneRegex);
+          const detectedPhone = phoneMatch ? phoneMatch[0] : "See transcript";
+
+          resend.emails.send({
+            from: FROM_EMAIL,
+            to: [CONTACT_EMAIL],
+            subject: `AI Chat Notification: Lead from Website (${detectedPhone !== "See transcript" ? detectedPhone : "New Chat Lead"})`,
+            html: `
+              <div style="font-family: serif; padding: 25px; color: #111; border: 1px solid #ddd; background-color: #fcfcfc; max-width: 600px; margin: 0 auto; border-top: 4px solid #00D2FF;">
+                <h2 style="color: #0b132b; margin-bottom: 15px; font-style: italic;">AI Chat Lead Notification</h2>
+                <p style="font-size: 14px; color: #333;">A visitor sent a request via the AI Chatbot on JodyStoryBailBonds.com:</p>
+                
+                <div style="background: #f0fafc; padding: 15px; border-left: 4px solid #00D2FF; margin: 15px 0;">
+                  <p style="margin: 0 0 6px 0; font-weight: bold; font-size: 13px; color: #0b132b;">Latest Visitor Message:</p>
+                  <p style="margin: 0; font-size: 15px; color: #111; font-style: italic;">"${message}"</p>
+                </div>
+
+                ${hasPhone ? `<p style="font-size: 16px; font-weight: bold; color: #00D2FF; margin: 15px 0;">Direct Phone Number: <a href="tel:${detectedPhone}" style="color: #00D2FF; text-decoration: underline;">${detectedPhone}</a></p>` : ''}
+
+                <h3 style="color: #0b132b; margin-top: 20px; font-size: 14px; border-bottom: 1px solid #eee; padding-bottom: 5px;">Recent Conversation Context:</h3>
+                <div style="background: #f7f9fa; padding: 12px; border-radius: 4px; font-size: 12px; color: #444; max-height: 220px; overflow-y: auto; font-family: monospace;">
+                  ${contents.slice(-6).map((c: any) => `<div style="margin-bottom: 8px;"><strong>${c.role === 'user' ? 'Visitor' : 'AI Assistant'}:</strong> ${c.parts?.[0]?.text || ''}</div>`).join('')}
+                </div>
+
+                <div style="margin-top: 25px; font-size: 11px; color: #888; text-align: center;">
+                  Jody Story Bail Bonds LLC • Automated AI Chat Notification • Available 24/7/365
+                </div>
+              </div>
+            `
+          }).catch(e => console.error("Error sending AI chat notification to Jody:", e));
+        }
+      }
+
       const response = await ai.models.generateContent({
-        model: "gemini-3.5-flash",
+        model: "gemini-3.6-flash",
         contents: contents,
         config: {
           systemInstruction: SYSTEM_PROMPT,

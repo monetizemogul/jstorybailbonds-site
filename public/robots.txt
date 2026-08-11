@@ -1,19 +1,32 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
 
-# SEO Bots specific allows
+# Explicitly allow Google, Bing, and major AI Answer Engine scrapers (AEO)
 User-agent: Googlebot
-Disallow:
-
-User-agent: AhrefsBot
-Disallow:
-
-User-agent: AhrefsSiteAudit
-Disallow:
+Allow: /
 
 User-agent: Google-Extended
-Disallow:
+Allow: /
 
-# Explicitly index all pages
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap Directive
 Sitemap: https://jstorybailbonds.com/sitemap.xml
+
