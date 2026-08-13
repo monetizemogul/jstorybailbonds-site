@@ -2,9 +2,10 @@ import { lazy, Suspense, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
-import { MapPin, ShieldCheck, Scale, Clock, Phone, ArrowLeft, CheckCircle, ChevronDown, ChevronUp } from 'lucide-react';
+import { MapPin, ShieldCheck, Scale, Clock, Phone, ArrowLeft, CheckCircle, ChevronDown, ChevronUp, Building2, Landmark, Compass } from 'lucide-react';
 import { cities } from './cities';
 import { countyDetailsMap } from './countyDetails';
+import { cityContentMap } from './cityContent';
 import Logo from '../components/Logo';
 import LazyRender from '../components/LazyRender';
 import { getCityUrl } from '../utils/urls';
@@ -16,6 +17,7 @@ export default function CityPage({ forceCityId }: { forceCityId?: string }) {
   const cityId = forceCityId || urlCityId;
   const city = cities.find(c => c.id === cityId);
   const countyDetails = city ? countyDetailsMap[city.countyId] : null;
+  const cityExtended = city ? cityContentMap[city.id] : null;
 
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
@@ -41,7 +43,7 @@ export default function CityPage({ forceCityId }: { forceCityId?: string }) {
     }
     return desc;
   })();
-  const pageKeywords = `${city.name} Bail Bonds, ${city.name} MO Bondsman, ${city.circuit} Bail Service, Bail Bonds near ${city.name} Missouri`;
+  const pageKeywords = `${city.name} Bail Bonds, ${city.name} MO Bondsman, ${city.circuit} Bail Service, Bail Bonds near ${city.name} Missouri, 24 Hour Jail Release ${city.name}`;
   const pageUrl = city?.id === 'bonne-terre' 
     ? 'https://jstorybailbonds.com/bonne-terre-mo-bail-bonds--24/7-jail-release-services'
     : city?.id === 'ironton'
@@ -50,7 +52,7 @@ export default function CityPage({ forceCityId }: { forceCityId?: string }) {
     : 'https://jstorybailbonds.com/';
   const pageImage = "https://jstorybailbonds.com/jody_story_bailbonds.jpg";
 
-  const richFaqItems = countyDetails?.extendedContent?.faqs || [
+  const richFaqItems = cityExtended?.faqs || countyDetails?.extendedContent?.faqs || [
     {
       question: `How do I secure a bail bond in ${city.name}, MO?`,
       answer: `To secure an immediate bail bond, contact Jody Story Bail Bonds 24/7 at (573) 854-9264. Our experienced bondsmen coordinate directly with the court clerk and duty deputies. You will typically need to pay a standard 10% premium or establish certified collateral to initiate the release procedure.`
@@ -130,6 +132,18 @@ export default function CityPage({ forceCityId }: { forceCityId?: string }) {
                 "parentOrganization": {
                   "@id": "https://jstorybailbonds.com/#organization"
                 }
+              },
+              {
+                "@type": "FAQPage",
+                "@id": `https://jstorybailbonds.com${getCityUrl(city.id)}/#faq`,
+                "mainEntity": richFaqItems.map(item => ({
+                  "@type": "Question",
+                  "name": item.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": item.answer
+                  }
+                }))
               },
               {
                 "@type": "BreadcrumbList",
@@ -250,7 +264,37 @@ export default function CityPage({ forceCityId }: { forceCityId?: string }) {
                 Fast Jail Release & Court Procedures in {city.name}
               </h2>
               <div className="prose prose-invert prose-brand max-w-none space-y-6 text-brand-text-dim leading-relaxed font-light">
-                {countyDetails?.extendedContent ? (
+                {cityExtended ? (
+                  <>
+                    <div className="space-y-4 whitespace-pre-wrap">
+                      {cityExtended.overview}
+                    </div>
+
+                    <h3 className="text-xl font-serif text-white font-bold mt-12 mb-6 border-b border-brand-border/40 pb-2 flex items-center gap-2">
+                      <Building2 className="w-5 h-5 text-brand-accent" />
+                      Local Police Department & Detention Details
+                    </h3>
+                    <div className="space-y-4 whitespace-pre-wrap">
+                      {cityExtended.policeInfo}
+                    </div>
+
+                    <h3 className="text-xl font-serif text-white font-bold mt-12 mb-6 border-b border-brand-border/40 pb-2 flex items-center gap-2">
+                      <Landmark className="w-5 h-5 text-brand-accent" />
+                      Municipal & Circuit Court Information
+                    </h3>
+                    <div className="space-y-4 whitespace-pre-wrap">
+                      {cityExtended.courtInfo}
+                    </div>
+
+                    <h3 className="text-xl font-serif text-white font-bold mt-12 mb-6 border-b border-brand-border/40 pb-2 flex items-center gap-2">
+                      <Compass className="w-5 h-5 text-brand-accent" />
+                      Local Bail Release Process in {city.name}
+                    </h3>
+                    <div className="space-y-4 whitespace-pre-wrap">
+                      {cityExtended.localBondProcess}
+                    </div>
+                  </>
+                ) : countyDetails?.extendedContent ? (
                   <>
                     <div className="space-y-4 whitespace-pre-wrap">
                       {countyDetails.extendedContent.overview}
@@ -289,16 +333,6 @@ export default function CityPage({ forceCityId }: { forceCityId?: string }) {
                       We work closely with local law enforcement to ensure your loved one is processed and released 
                       without unnecessary delays. You can look up active court calendars and case records directly via the official <a href="https://www.courts.mo.gov/" target="_blank" rel="noopener noreferrer" className="text-brand-accent underline hover:text-white transition-colors">Missouri Courts Portal</a>.
                     </p>
-                    <div className="grid sm:grid-cols-2 gap-8 my-12">
-                      <div className="bg-brand-surface p-6 border border-brand-border">
-                        <h4 className="text-brand-accent font-black uppercase tracking-widest text-xs mb-4">Local Service</h4>
-                        <p className="text-sm">We serve all neighborhoods and municipal courts in {city.name}, MO.</p>
-                      </div>
-                      <div className="bg-brand-surface p-6 border border-brand-border">
-                        <h4 className="text-brand-accent font-black uppercase tracking-widest text-xs mb-4">County Reach</h4>
-                        <p className="text-sm">Integrated services with {city.countyName} sheriff's department and circuit courts.</p>
-                      </div>
-                    </div>
                   </>
                 )}
               </div>

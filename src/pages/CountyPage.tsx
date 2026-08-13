@@ -111,22 +111,9 @@ export default function CountyPage() {
     }
   ];
 
-  const isWebster = county.id === 'webster';
-  const isRipley = county.id === 'ripley';
-  const isHowell = county.id === 'howell';
-
-  const pageTitle = isWebster
-    ? "Webster County Bail Bonds | Marshfield MO | 24/7 Jody Story"
-    : isRipley
-      ? "Ripley County Bail Bonds | Doniphan MO | 24/7 Fast Release"
-      : isHowell
-        ? "Howell County Bail Bonds | West Plains MO | 24/7 Jody Story"
-        : `${county.name} Bail Bonds | 24/7 Fast Jail Release | Jody Story`;
+  const pageTitle = `${county.name} Bail Bonds | 24/7 Fast Jail Release | Jody Story`;
 
   const pageDescription = (() => {
-    if (isWebster) return "Need 24/7 bail bonds in Webster County? We offer fast jail release in Marshfield, Seymour, and Rogersville. Call Jody Story at (573) 854-9264.";
-    if (isRipley) return "Need 24/7 bail bonds in Ripley County? Jody Story offers reliable jail release in Doniphan, Naylor, & Fairdealing. Call (573) 854-9264 now.";
-    if (isHowell) return "Fast 24/7 bail bonds in Howell County, MO. We provide professional jail release in West Plains & Willow Springs. Call Jody Story at (573) 854-9264.";
     
     if (details) {
       const jail = details.jailName;
@@ -154,9 +141,7 @@ export default function CountyPage() {
 
   const pageKeywords = `${county.name} Bail Bonds, ${details?.countySeat || ''} MO Bondsman, ${details?.jailName || ''}, ${county.circuit} Bail Service, ${county.name} Sheriff, Bail Bonds near ${county.name} Missouri, Jody Story Bail Bonds`;
   const pageUrl = `https://jstorybailbonds.com/service-area/${county.id}`;
-  const pageImage = (isWebster || isRipley || isHowell)
-    ? "https://jstorybailbonds.com/logo.png"
-    : "https://jstorybailbonds.com/jody_story_bailbonds.jpg";
+  const pageImage = "https://jstorybailbonds.com/jody_story_bailbonds.jpg";
 
   return (
     <div className="min-h-screen">
@@ -182,174 +167,8 @@ export default function CountyPage() {
         <meta name="twitter:image" content={pageImage} />
 
         <script type="application/ld+json">
-          {JSON.stringify(
-            isWebster
-              ? {
-                  "@context": "https://schema.org",
-                  "@graph": [
-                    {
-                      "@type": "LegalService",
-                      "name": "Jody Story Bail Bonds LLC",
-                      "url": "https://jstorybailbonds.com/service-area/webster",
-                      "image": "https://jstorybailbonds.com/logo.png",
-                      "telephone": "573-854-9264",
-                      "email": "jodystory95@yahoo.com",
-                      "priceRange": "$$",
-                      "address": {
-                        "@type": "PostalAddress",
-                        "addressLocality": "Marshfield",
-                        "addressRegion": "MO",
-                        "addressCountry": "US"
-                      },
-                      "knowsAbout": ["Bail Bonds", "Surety Bonds", "Transfer Bonds", "Webster County Court Rules", "Jail Release Procedures"],
-                      "areaServed": [
-                        {
-                          "@type": "AdministrativeArea",
-                          "name": "Webster County",
-                          "containsPlace": [
-                            {"@type": "City", "name": "Marshfield"},
-                            {"@type": "City", "name": "Seymour"},
-                            {"@type": "City", "name": "Rogersville"}
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "@type": "BreadcrumbList",
-                      "@id": "https://jstorybailbonds.com/service-area/webster/#breadcrumb",
-                      "itemListElement": [
-                        {
-                          "@type": "ListItem",
-                          "position": 1,
-                          "item": {
-                            "@id": "https://jstorybailbonds.com/",
-                            "name": "Home"
-                          }
-                        },
-                        {
-                          "@type": "ListItem",
-                          "position": 2,
-                          "item": {
-                            "@id": "https://jstorybailbonds.com/service-area/webster",
-                            "name": "Webster County Bail Bonds"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              : isRipley
-                ? {
-                    "@context": "https://schema.org",
-                    "@graph": [
-                      {
-                        "@type": "LegalService",
-                        "name": "Jody Story Bail Bonds LLC",
-                        "url": "https://jstorybailbonds.com/service-area/ripley",
-                        "image": "https://jstorybailbonds.com/logo.png",
-                        "telephone": "573-854-9264",
-                        "email": "jodystory95@yahoo.com",
-                        "priceRange": "$$",
-                        "address": {
-                          "@type": "PostalAddress",
-                          "addressLocality": "Doniphan",
-                          "addressRegion": "MO",
-                          "addressCountry": "US"
-                        },
-                        "knowsAbout": ["Bail Bonds", "Surety Bonds", "Transfer Bonds", "Ripley County Court System", "Jail Release Procedures"],
-                        "areaServed": [
-                          {
-                            "@type": "AdministrativeArea",
-                            "name": "Ripley County",
-                            "containsPlace": [
-                              {"@type": "City", "name": "Doniphan"},
-                              {"@type": "City", "name": "Naylor"},
-                              {"@type": "City", "name": "Fairdealing"}
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "@type": "BreadcrumbList",
-                        "@id": "https://jstorybailbonds.com/service-area/ripley/#breadcrumb",
-                        "itemListElement": [
-                          {
-                            "@type": "ListItem",
-                            "position": 1,
-                            "item": {
-                              "@id": "https://jstorybailbonds.com/",
-                              "name": "Home"
-                            }
-                          },
-                          {
-                            "@type": "ListItem",
-                            "position": 2,
-                            "item": {
-                              "@id": "https://jstorybailbonds.com/service-area/ripley",
-                              "name": "Ripley County Bail Bonds"
-                            }
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                : isHowell
-                  ? {
-                      "@context": "https://schema.org",
-                      "@graph": [
-                        {
-                          "@type": "LegalService",
-                          "name": "Jody Story Bail Bonds LLC",
-                          "url": "https://jstorybailbonds.com/service-area/howell",
-                          "image": "https://jstorybailbonds.com/logo.png",
-                          "telephone": "573-854-9264",
-                          "email": "jodystory95@yahoo.com",
-                          "priceRange": "$$",
-                          "address": {
-                            "@type": "PostalAddress",
-                            "addressLocality": "West Plains",
-                            "addressRegion": "MO",
-                            "addressCountry": "US"
-                          },
-                          "knowsAbout": ["Bail Bonds", "Surety Bonds", "Transfer Bonds", "37th Judicial Circuit Rules", "Howell County Jail Procedures"],
-                          "areaServed": [
-                            {
-                              "@type": "AdministrativeArea",
-                              "name": "Howell County",
-                              "containsPlace": [
-                                {"@type": "City", "name": "West Plains"},
-                                {"@type": "City", "name": "Willow Springs"},
-                                {"@type": "City", "name": "Mountain View"}
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "@type": "BreadcrumbList",
-                          "@id": "https://jstorybailbonds.com/service-area/howell/#breadcrumb",
-                          "itemListElement": [
-                            {
-                              "@type": "ListItem",
-                              "position": 1,
-                              "item": {
-                                "@id": "https://jstorybailbonds.com/",
-                                "name": "Home"
-                              }
-                            },
-                            {
-                              "@type": "ListItem",
-                              "position": 2,
-                              "item": {
-                                "@id": "https://jstorybailbonds.com/service-area/howell",
-                                "name": "Howell County Bail Bonds"
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  : {
-                      "@context": "https://schema.org",
+          {JSON.stringify({
+            "@context": "https://schema.org",
                       "@graph": [
                         {
                           "@type": "Organization",
@@ -428,8 +247,7 @@ export default function CountyPage() {
                           ]
                         }
                       ]
-                    }
-          )}
+            })}
         </script>
       </Helmet>
       
@@ -511,7 +329,7 @@ export default function CountyPage() {
                   </div>
                   <div>
                     <p className="text-[10px] text-[#00D2FF] font-black uppercase tracking-[0.3em] leading-none">Border Alert</p>
-                    <p className="text-white text-xs font-light mt-1.5">Your location borders {county.name}, but Jody Story serves the whole {county.circuit} and 20+ other counties across MO. Call for immediate dispatch!</p>
+                    <p className="text-white text-xs font-light mt-1.5">Your location borders {county.name}. Jody Story serves the whole {county.circuit} and counties across Missouri. Call for immediate dispatch!</p>
                   </div>
                 </motion.div>
               )}

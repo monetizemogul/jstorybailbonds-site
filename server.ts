@@ -33,7 +33,7 @@ Company Info:
 - Primary Phone: 573-854-9264 (Call or Text anytime 24/7)
 - Email: jodystory95@yahoo.com
 - Main Address: 102 North Mine St, Potosi, MO 63664
-- Coverage: Over 20+ Missouri counties (Washington, Jefferson, St. Francois, St. Charles, Howell, Iron, Crawford, Dent, Madison, Butler, etc.)
+- Coverage: 11 Primary Missouri counties (Washington County, St. Francois County, Ste. Genevieve County, Madison County, Franklin County, Iron County, Dent County, Wayne County, Reynolds County, Stoddard County, and Dunklin County)
 - Values: Fast, Confidential, 24/7 Availability, Respectful Service
 
 Key Guidelines & Rules:
@@ -67,10 +67,10 @@ async function startServer() {
 
   // Enforce trailing slash canonicalization (301 redirect trailing-slashed GET requests to non-trailing slash, except root)
   app.use((req, res, next) => {
-    if (req.method === "GET") {
+    if (req.method === "GET" || req.method === "HEAD") {
       const urlPath = req.path;
       if (urlPath.endsWith("/") && urlPath.length > 1) {
-        const cleanPath = urlPath.slice(0, -1);
+        const cleanPath = urlPath.replace(/\/+$/, "") || "/";
         const query = req.url.slice(req.path.length);
         return res.redirect(301, `${cleanPath}${query}`);
       }
@@ -84,9 +84,6 @@ async function startServer() {
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
     res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
     
-    // SEO: Add explicit X-Robots-Tag directive to encourage open web crawling
-    res.setHeader("X-Robots-Tag", "index, follow");
-    
     // Handle OPTIONS preflight
     if (req.method === 'OPTIONS') {
       return res.sendStatus(200);
@@ -94,15 +91,84 @@ async function startServer() {
     next();
   });
 
-  // 301 Canonical Redirect for obsolete or non-existent URLs (e.g. /felony-bail-bonds) to prevent SEO duplicates
+  // Explicit handlers for robots.txt and sitemap.xml to guarantee 200 OK and correct mime types
+  app.get("/robots.txt", (req, res) => {
+    res.setHeader("Content-Type", "text/plain; charset=utf-8");
+    res.setHeader("Cache-Control", "public, max-age=86400");
+    const filePath = path.join(process.cwd(), process.env.NODE_ENV === "production" ? "dist" : "public", "robots.txt");
+    if (fs.existsSync(filePath)) {
+      return res.sendFile(filePath);
+    }
+    return res.send("User-agent: *\nAllow: /\nSitemap: https://jstorybailbonds.com/sitemap.xml\n");
+  });
+
+  app.get("/sitemap.xml", (req, res) => {
+    res.setHeader("Content-Type", "application/xml; charset=utf-8");
+    res.setHeader("Cache-Control", "public, max-age=86400");
+    const filePath = path.join(process.cwd(), process.env.NODE_ENV === "production" ? "dist" : "public", "sitemap.xml");
+    if (fs.existsSync(filePath)) {
+      return res.sendFile(filePath);
+    }
+    return res.status(404).send("<error>Sitemap not found</error>");
+  });
+
+  // Recognized active Missouri service areas
   const VALID_COUNTIES = new Set([
-    'pettis', 'cooper', 'benton', 'hickory', 'dallas', 'polk', 'webster', 'st-charles', 'jefferson', 'washington', 'st-francois', 'ste-genevieve', 'madison', 'crawford', 'iron', 'reynolds', 'dent', 'wayne', 'howell', 'oregon', 'shannon', 'carter', 'ripley', 'butler', 'franklin'
+    'washington', 'st-francois', 'ste-genevieve', 'madison', 'franklin', 'iron', 'dent', 'wayne', 'reynolds', 'stoddard', 'dunklin'
   ]);
 
   const VALID_CITIES = new Set([
-    'potosi', 'farmington', 'hillsboro', 'sedalia', 'poplar-bluff', 'west-plains', 'bolivar', 'festus', 'park-hills', 'marshfield', 'bonne-terre', 'ironton'
+    'potosi', 'farmington', 'park-hills', 'bonne-terre', 'ste-genevieve-city', 'fredericktown', 'union', 'washington-city', 'ironton', 'salem', 'greenville', 'ellington', 'bloomfield', 'dexter', 'kennett', 'malden'
   ]);
 
+  interface RouteMatch {
+    status: 200 | 301 | 404;
+    redirectUrl?: string;
+    canonicalUrl?: string;
+  }
+
+  function resolveRoute(rawPath: string): RouteMatch {
+    const cleanPath = rawPath.toLowerCase().replace(/\/+$/, "") || "/";
+
+    // 301 Permanent Redirects for legacy/alias routes
+    if (cleanPath === "/service-area/city/bonne-terre") {
+      return { status: 301, redirectUrl: "/bonne-terre-mo-bail-bonds--24/7-jail-release-services" };
+    }
+    if (cleanPath === "/service-area/city/ironton") {
+      return { status: 301, redirectUrl: "/ironton-bail-bonds-247-jail-release" };
+    }
+    if (cleanPath === "/felony-bail-bonds") {
+      return { status: 301, redirectUrl: "/" };
+    }
+
+    // 200 OK Valid Routes
+    if (cleanPath === "/" || cleanPath === "/index.html") {
+      return { status: 200, canonicalUrl: "https://jstorybailbonds.com/" };
+    }
+    if (cleanPath === "/bonne-terre-mo-bail-bonds--24/7-jail-release-services") {
+      return { status: 200, canonicalUrl: "https://jstorybailbonds.com/bonne-terre-mo-bail-bonds--24/7-jail-release-services" };
+    }
+    if (cleanPath === "/ironton-bail-bonds-247-jail-release") {
+      return { status: 200, canonicalUrl: "https://jstorybailbonds.com/ironton-bail-bonds-247-jail-release" };
+    }
+
+    if (cleanPath.startsWith("/service-area/city/")) {
+      const cityId = cleanPath.substring("/service-area/city/".length);
+      if (VALID_CITIES.has(cityId) && cityId !== 'bonne-terre' && cityId !== 'ironton') {
+        return { status: 200, canonicalUrl: `https://jstorybailbonds.com/service-area/city/${cityId}` };
+      }
+    } else if (cleanPath.startsWith("/service-area/")) {
+      const countyId = cleanPath.substring("/service-area/".length);
+      if (VALID_COUNTIES.has(countyId)) {
+        return { status: 200, canonicalUrl: `https://jstorybailbonds.com/service-area/${countyId}` };
+      }
+    }
+
+    // Any other URL is a genuine 404 (Not Found)
+    return { status: 404 };
+  }
+
+  // Middleware to handle 301 redirects and attach route validation info
   app.use((req, res, next) => {
     if (req.method !== "GET" && req.method !== "HEAD") {
       return next();
@@ -111,7 +177,7 @@ async function startServer() {
     const rawPath = req.path;
     const cleanPath = rawPath.toLowerCase().replace(/\/+$/, "") || "/";
 
-    // Let static assets, API, and core development directories/files pass through untouched
+    // Let static assets, API, and core development files pass through untouched
     if (
       cleanPath.startsWith("/api/") ||
       cleanPath.startsWith("/assets/") ||
@@ -127,33 +193,15 @@ async function startServer() {
       return next();
     }
 
-    // Check if it's a valid front-end route
-    if (cleanPath === "/service-area/city/bonne-terre") {
-      return res.redirect(301, "/bonne-terre-mo-bail-bonds--24/7-jail-release-services");
-    }
-    if (cleanPath === "/service-area/city/ironton") {
-      return res.redirect(301, "/ironton-bail-bonds-247-jail-release");
+    const routeMatch = resolveRoute(rawPath);
+
+    if (routeMatch.status === 301 && routeMatch.redirectUrl) {
+      return res.redirect(301, routeMatch.redirectUrl);
     }
 
-    if (cleanPath === "/" || cleanPath === "/index.html" || cleanPath === "/felony-bail-bonds" || cleanPath === "/bonne-terre-mo-bail-bonds--24/7-jail-release-services" || cleanPath === "/ironton-bail-bonds-247-jail-release") {
-      return next();
-    }
-
-    if (cleanPath.startsWith("/service-area/city/")) {
-      const cityId = cleanPath.substring("/service-area/city/".length);
-      if (VALID_CITIES.has(cityId)) {
-        return next();
-      }
-    } else if (cleanPath.startsWith("/service-area/")) {
-      const countyId = cleanPath.substring("/service-area/".length);
-      if (VALID_COUNTIES.has(countyId)) {
-        return next();
-      }
-    }
-
-    // If path is invalid or obsolete (e.g., /felony-bail-bonds or old URLs), issue 301 Redirect to the homepage
-    console.log(`Obsolete/invalid route requested: "${rawPath}". Redirecting 301 to "/" canonical site root.`);
-    return res.redirect(301, "/");
+    // Attach route match result to request for SSR/HTML rendering
+    (req as any).routeMatch = routeMatch;
+    next();
   });
 
   app.use(express.json());
@@ -485,9 +533,55 @@ async function startServer() {
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
       server: { middlewareMode: true },
-      appType: "spa",
+      appType: "custom",
     });
+
     app.use(vite.middlewares);
+
+    app.use(async (req, res, next) => {
+      if (req.method !== "GET" && req.method !== "HEAD") {
+        return next();
+      }
+      
+      const cleanPath = req.path.toLowerCase().replace(/\/+$/, "") || "/";
+      if (
+        cleanPath.startsWith("/api/") ||
+        cleanPath.startsWith("/assets/") ||
+        cleanPath.startsWith("/@") ||
+        cleanPath.startsWith("/src/") ||
+        cleanPath.startsWith("/node_modules/") ||
+        /\.[a-zA-Z0-9]{2,5}$/.test(cleanPath)
+      ) {
+        return next();
+      }
+
+      const routeMatch: RouteMatch = (req as any).routeMatch || resolveRoute(req.path);
+
+      try {
+        let template = fs.readFileSync(path.resolve(process.cwd(), "index.html"), "utf-8");
+        template = await vite.transformIndexHtml(req.originalUrl, template);
+
+        if (routeMatch.status === 404) {
+          res.status(404);
+          res.setHeader("X-Robots-Tag", "noindex, nofollow");
+          const noindexTag = `<meta name="robots" content="noindex, nofollow" />`;
+          template = template.replace('</head>', `  ${noindexTag}\n  </head>`);
+        } else {
+          res.status(200);
+          res.setHeader("X-Robots-Tag", "index, follow");
+          if (routeMatch.canonicalUrl) {
+            const canonicalTag = `<link rel="canonical" href="${routeMatch.canonicalUrl}" data-static="true" />`;
+            template = template.replace('</head>', `  ${canonicalTag}\n  </head>`);
+          }
+        }
+
+        res.setHeader("Content-Type", "text/html");
+        res.setHeader("Cache-Control", "no-store");
+        return res.send(template);
+      } catch (e) {
+        return next(e);
+      }
+    });
   } else {
     const distPath = path.join(process.cwd(), 'dist');
     
@@ -508,15 +602,29 @@ async function startServer() {
       // Serve index.html with no-cache headers to ensure users always receive the latest release
       res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
       res.setHeader("Content-Type", "text/html");
+
+      const routeMatch: RouteMatch = (req as any).routeMatch || resolveRoute(req.path);
+
+      if (routeMatch.status === 404) {
+        res.status(404);
+        res.setHeader("X-Robots-Tag", "noindex, nofollow");
+      } else {
+        res.status(200);
+        res.setHeader("X-Robots-Tag", "index, follow");
+      }
+
       try {
         let html = fs.readFileSync(path.join(distPath, 'index.html'), 'utf-8');
         
-        // Inject a dynamic canonical tag to prevent SPA indexing issues and 'Alternate page with proper canonical tag' errors
-        const canonicalUrl = `https://jstorybailbonds.com${req.path}`;
-        const canonicalTag = `<link rel="canonical" href="${canonicalUrl}" data-static="true" />`;
-        
-        // Replace the default title and inject canonical
-        html = html.replace('</head>', `  ${canonicalTag}\n  </head>`);
+        if (routeMatch.status === 200 && routeMatch.canonicalUrl) {
+          // Inject dynamic canonical tag for valid 200 pages
+          const canonicalTag = `<link rel="canonical" href="${routeMatch.canonicalUrl}" data-static="true" />`;
+          html = html.replace('</head>', `  ${canonicalTag}\n  </head>`);
+        } else if (routeMatch.status === 404) {
+          // Ensure search engines do not index 404 pages
+          const noindexTag = `<meta name="robots" content="noindex, nofollow" />`;
+          html = html.replace('</head>', `  ${noindexTag}\n  </head>`);
+        }
         
         res.send(html);
       } catch (e) {

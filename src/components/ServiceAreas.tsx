@@ -19,8 +19,8 @@ export default function ServiceAreas() {
               Service <span className="text-gradient-gold">Areas</span>
             </h2>
             <p className="text-brand-text-dim max-w-2xl mx-auto font-light leading-relaxed">
-              Providing expert bail bond services across multiple Missouri judicial circuits. 
-              Available 24/7 in over 30 counties and major cities.
+              Providing expert bail bond services across Missouri judicial circuits. 
+              Available 24/7 across our 11 primary service counties and major cities.
             </p>
           </motion.div>
         </div>
@@ -78,7 +78,7 @@ export default function ServiceAreas() {
         </div>
 
         <div className="mt-16 text-center">
-          <p className="text-xs text-brand-text-dim uppercase tracking-widest font-bold mb-4">Not listed? We serve over 20+ other Missouri counties.</p>
+          <p className="text-xs text-brand-text-dim uppercase tracking-widest font-bold mb-4">Need help in another area? We assist across Missouri.</p>
           <a href="tel:5738549264" className="text-brand-primary font-black uppercase tracking-widest border-b border-brand-primary hover:text-white hover:border-white transition-all text-sm pb-1">
             Call for Immediate Assistance
           </a>

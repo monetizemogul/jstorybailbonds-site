@@ -10,7 +10,7 @@ You are NOT a lawyer and you should NOT give legal advice.
 Company Info:
 - Name: Jody Story Bail Bonds LLC
 - Service: 24/7 Bail Bond assistance
-- Areas Served: Over 20 counties across Missouri, including Washington, Jefferson, St. Francois, St. Charles, Howell, and Iron County.
+- Areas Served: 11 primary counties in Missouri (Washington, St. Francois, Ste. Genevieve, Madison, Franklin, Iron, Dent, Wayne, Reynolds, Stoddard, Dunklin).
 - Core Values: Fast, Confidential, Professional
 - Address: 102 North Mine St, Potosi, MO 63664
 - Phone: 573-854-9264

@@ -80,12 +80,12 @@ export default function Hero() {
                 <div className="bg-brand-bg/80 p-6 border border-brand-primary/30">
                   <p className="text-[10px] text-brand-accent uppercase tracking-[.3em] mb-4 font-black">Service Areas</p>
                   <p className="text-sm italic font-serif leading-relaxed text-brand-text mb-4">
-                    Serving over 20 counties in Missouri with professional, discreet, and rapid assistance.
+                    Serving 11 primary counties in Missouri with professional, discreet, and rapid assistance.
                   </p>
                   <div className="flex flex-wrap gap-2 justify-center">
                     {[
-                      'Washington', 'St Francois', 'Ste Genevieve', 'Madison', 
-                      'Franklin', 'Crawford', 'Dent', 'Iron', 'Reynolds', 'Wayne'
+                      'Washington', 'St. Francois', 'Ste. Genevieve', 'Madison', 
+                      'Franklin', 'Iron', 'Dent', 'Wayne', 'Reynolds', 'Stoddard', 'Dunklin'
                     ].map(id => (
                       <span key={id} className="text-[8px] uppercase font-black text-brand-accent border border-brand-accent/30 px-2 py-0.5 whitespace-nowrap">
                         {id}

@@ -91,52 +91,6 @@ After the paperwork is signed, our agent takes it straight to the jail in Farmin
       }
     ]
   },
-  'jefferson': {
-    overview: `Jefferson County is a large, busy area just south of St. Louis, covering towns like Hillsboro, Festus, Arnold, Herculaneum, and De Soto. Because so many people live and travel through here, it's a highly active area for local police and the Sheriff's Office. You need a bail bondsman who knows the county inside and out.
-
-When an arrest happens—whether it's in a busy city like Arnold or a smaller town like Hillsboro—the stress hits you immediately. Trying to figure out the local legal system on your own can feel impossible. That's where Jody Story Bail Bonds comes in. We offer fast, reliable help 24 hours a day and send our agents directly to the jail in Hillsboro. 
-
-We act as your guide during this stressful time. We keep everything completely confidential, using secure digital paperwork when possible to protect your privacy. We also know that an unexpected arrest can be hard on your wallet. That's why we offer extremely flexible payment plans for the standard 10% fee. Our goal is to get your loved one home without emptying your bank account.`,
-    jailInfo: `The main jail for this area is the Jefferson County Jail, located right next to the courthouse at 510 1st St, Hillsboro, MO 63050. It’s a very large, secure facility that handles thousands of people every year. Because they process arrests from Arnold, Festus, and everywhere in between, getting booked can take a long time.
-
-Jody Story Bail Bonds knows exactly how the Hillsboro jail works. Our local agents know the staff, the shift changes, and how to submit paperwork correctly the first time. This means we can often avoid the long, frustrating delays that many families face when trying to post bail themselves.
-
-Once a judge sets the bond amount, our agent takes the certified paperwork straight to the booking desk in Hillsboro. We keep checking the release queue and working with the officers on duty to speed things up, making sure your loved one spends as little time behind bars as possible.`,
-    courtInfo: `Court cases in Jefferson County go through the 23rd Judicial Circuit Court in Hillsboro. It's one of the busiest courts in the state, handling serious criminal charges and major civil cases. There are also smaller city courts in places like Arnold, Festus, and De Soto for traffic tickets and minor crimes.
-
-The judges in the 23rd Circuit are very strict. They expect you to show up to every single court date, without exception. Jody Story Bail Bonds acts as your partner to make sure you stay out of trouble with the court.
-
-When we post a bond, it’s a serious legal contract. We help you keep track of your confusing court schedules and send you reminders before important dates. If a real emergency causes you to miss a date, our strong reputation with the court clerks can sometimes help us fix the issue before the judge issues a new warrant and takes your bond money.`,
-    localBondProcess: `The bail process in Jefferson County is very strict. No matter where someone is arrested in the county, they will be taken to the Jefferson County Jail in Hillsboro to be booked. They cannot be released until a judge formally sets their bail amount, or a standard schedule is applied.
-
-Once that amount is set, you need to act fast. Call Jody Story Bail Bonds at (573) 854-9264 right away. We immediately check the jail's system to see the exact charges and the required bail amount. Then, we easily walk you through the agreement.
-
-By state law, you pay a non-refundable fee of 10% of the total bail amount. We specialize in creating custom, affordable payment plans to make this easier on you. We can even handle the paperwork electronically to save time. 
-
-Once everything is signed, our agent takes the certified document straight to the booking window at the jail. After the jail staff approves it, the release process begins. We’ll be there to greet your loved one, explain their upcoming court dates, and make sure they get home safely.`,
-    faqs: [
-      {
-        question: "Where is the Jefferson County Jail located, and how do I get there?",
-        answer: "The Jefferson County Jail is located directly in the county seat at 510 1st St, Hillsboro, MO 63050. It is a major facility situated right next to the 23rd Judicial Circuit courthouse."
-      },
-      {
-        question: "Can you assist with arrests made by Arnold or Festus municipal police?",
-        answer: "Yes, absolutely. Arrests made by local police departments in cities like Arnold, Festus, De Soto, or Pevely are ultimately transported to the main Jefferson County Jail in Hillsboro if they require state-level bonding. We manage releases for all these jurisdictions."
-      },
-      {
-        question: "The bond is very high in Jefferson County; do you offer financing?",
-        answer: "Yes. Given the severe nature of some charges in the 23rd Circuit, bonds can be substantial. We provide highly flexible, tailored financing plans on the 10% premium to ensure that families can secure release without facing immediate economic ruin."
-      },
-      {
-        question: "How long does it take to get released from the Hillsboro facility?",
-        answer: "Jefferson County is a massive, high-volume facility. Once our agents lodge the certified bond, administrative release usually takes 2 to 4 hours. However, our presence and constant communication with the desk officers ensure it happens as fast as humanly possible."
-      },
-      {
-        question: "What happens if a court date at the Hillsboro courthouse is completely missed?",
-        answer: "Failing to appear will trigger an immediate bench warrant from the judge and initiate bond forfeiture proceedings. If you miss a date, you must call Jody Story Bail Bonds instantly. We can often negotiate a surrender or reinstatement to prevent you from owing the full massive bail amount."
-      }
-    ]
-  },
   'franklin': {
     overview: `Franklin County is a massive area bordering the St. Louis metro, covering towns like Union, Washington, Pacific, Sullivan, and St. Clair. With major highways like I-44 and Highway 50 running through it, it's a very busy region. To get someone out of jail here, you need a bail bondsman who works fast, knows the law, and has strong local connections.
 
@@ -321,420 +275,6 @@ The deputies review the paperwork, and the physical release process begins immed
       }
     ]
   },
-  'pettis': {
-    overview: `Pettis County is a large, busy area covering towns like Sedalia, Green Ridge, La Monte, Smithton, Houstonia. Because so many people live and travel through here, it's a highly active area for local police and the Sheriff's Office. You need a bail bondsman who knows the county inside and out.
-
-When an arrest happens—whether it's in a busy city like Sedalia or a smaller town—the stress hits you immediately. Trying to figure out the local legal system on your own can feel impossible. That's where Jody Story Bail Bonds comes in. We offer fast, reliable help 24 hours a day and send our agents directly to the jail in Sedalia.
-
-We act as your guide during this stressful time. We keep everything completely confidential, using secure digital paperwork when possible to protect your privacy. We also know that an unexpected arrest can be hard on your wallet. That's why we offer extremely flexible payment plans for the standard 10% fee. Our goal is to get your loved one home without emptying your bank account.`,
-    jailInfo: `The main jail for this area is the Pettis County Jail, located at 319 S Lamine Ave, Sedalia, MO 65301. It’s a secure facility that handles people every year. Because they process arrests from Sedalia, Green Ridge, and everywhere in between, getting booked can take a long time.
-
-Jody Story Bail Bonds knows exactly how the Sedalia jail works. Our local agents know the staff, the shift changes, and how to submit paperwork correctly the first time. This means we can often avoid the long, frustrating delays that many families face when trying to post bail themselves.
-
-Once a judge sets the bond amount, our agent takes the certified paperwork straight to the booking desk in Sedalia. We keep checking the release queue and working with the officers on duty to speed things up, making sure your loved one spends as little time behind bars as possible.`,
-    courtInfo: `Court cases in Pettis County go through the Pettis County Circuit Court - 18th Judicial Circuit. It handles serious criminal charges and major civil cases. There are also smaller city courts in places like Sedalia, Green Ridge, La Monte for traffic tickets and minor crimes.
-
-The judges in this circuit are very strict. They expect you to show up to every single court date, without exception. Jody Story Bail Bonds acts as your partner to make sure you stay out of trouble with the court.
-
-When we post a bond, it’s a serious legal contract. We help you keep track of your confusing court schedules and send you reminders before important dates. If a real emergency causes you to miss a date, our strong reputation with the court clerks can sometimes help us fix the issue before the judge issues a new warrant and takes your bond money.`,
-    localBondProcess: `The bail process in Pettis County is very strict. No matter where someone is arrested in the county, they will be taken to the Pettis County Jail in Sedalia to be booked. They cannot be released until a judge formally sets their bail amount, or a standard schedule is applied.
-
-Once that amount is set, you need to act fast. Call Jody Story Bail Bonds at (573) 854-9264 right away. We immediately check the jail's system to see the exact charges and the required bail amount. Then, we easily walk you through the agreement.
-
-By state law, you pay a non-refundable fee of 10% of the total bail amount. We specialize in creating custom, affordable payment plans to make this easier on you. We can even handle the paperwork electronically to save time.
-
-Once everything is signed, our agent takes the certified document straight to the booking window at the jail. After the jail staff approves it, the release process begins. We’ll be there to greet your loved one, explain their upcoming court dates, and make sure they get home safely.`,
-    faqs: [
-      {
-        question: "Where is the Pettis County Jail located, and how do I get there?",
-        answer: "The Pettis County Jail is located at 319 S Lamine Ave, Sedalia, MO 65301. It serves as the primary holding facility for the entire county."
-      },
-      {
-        question: "Can you assist with arrests made by local police in Sedalia?",
-        answer: "Yes, absolutely. Arrests made by local police departments in cities like Sedalia, Green Ridge, La Monte, Smithton, Houstonia are ultimately transported to the main Pettis County Jail in Sedalia if they require state-level bonding. We manage releases for all these jurisdictions."
-      },
-      {
-        question: "The bond is very high in Pettis County; do you offer financing?",
-        answer: "Yes. Given the severe nature of some charges in this Circuit, bonds can be substantial. We provide highly flexible, tailored financing plans on the 10% premium to ensure that families can secure release without facing immediate economic ruin."
-      },
-      {
-        question: "How long does it take to get released from the Sedalia facility?",
-        answer: "Once our agents lodge the certified bond, administrative release usually takes 2 to 4 hours depending on their volume. However, our presence and constant communication with the desk officers ensure it happens as fast as possible."
-      },
-      {
-        question: "What happens if a court date at the Pettis County courthouse is missed?",
-        answer: "Failing to appear will trigger an immediate bench warrant from the judge and initiate bond forfeiture proceedings. If you miss a date, you must call Jody Story Bail Bonds instantly. We can often negotiate a surrender or reinstatement to prevent you from owing the full massive bail amount."
-      }
-    ]
-  },
-  'cooper': {
-    overview: `Cooper County is a large, busy area covering towns like Boonville, Pilot Grove, Otterville, Bunceton, Wooldridge. Because so many people live and travel through here, it's a highly active area for local police and the Sheriff's Office. You need a bail bondsman who knows the county inside and out.
-
-When an arrest happens—whether it's in a busy city like Boonville or a smaller town—the stress hits you immediately. Trying to figure out the local legal system on your own can feel impossible. That's where Jody Story Bail Bonds comes in. We offer fast, reliable help 24 hours a day and send our agents directly to the jail in Boonville.
-
-We act as your guide during this stressful time. We keep everything completely confidential, using secure digital paperwork when possible to protect your privacy. We also know that an unexpected arrest can be hard on your wallet. That's why we offer extremely flexible payment plans for the standard 10% fee. Our goal is to get your loved one home without emptying your bank account.`,
-    jailInfo: `The main jail for this area is the Cooper County Detention Center, located at 200 Main St, Boonville, MO 65233. It’s a secure facility that handles people every year. Because they process arrests from Boonville, Pilot Grove, and everywhere in between, getting booked can take a long time.
-
-Jody Story Bail Bonds knows exactly how the Boonville jail works. Our local agents know the staff, the shift changes, and how to submit paperwork correctly the first time. This means we can often avoid the long, frustrating delays that many families face when trying to post bail themselves.
-
-Once a judge sets the bond amount, our agent takes the certified paperwork straight to the booking desk in Boonville. We keep checking the release queue and working with the officers on duty to speed things up, making sure your loved one spends as little time behind bars as possible.`,
-    courtInfo: `Court cases in Cooper County go through the Cooper County Circuit Court - 18th Judicial Circuit. It handles serious criminal charges and major civil cases. There are also smaller city courts in places like Boonville, Pilot Grove, Otterville for traffic tickets and minor crimes.
-
-The judges in this circuit are very strict. They expect you to show up to every single court date, without exception. Jody Story Bail Bonds acts as your partner to make sure you stay out of trouble with the court.
-
-When we post a bond, it’s a serious legal contract. We help you keep track of your confusing court schedules and send you reminders before important dates. If a real emergency causes you to miss a date, our strong reputation with the court clerks can sometimes help us fix the issue before the judge issues a new warrant and takes your bond money.`,
-    localBondProcess: `The bail process in Cooper County is very strict. No matter where someone is arrested in the county, they will be taken to the Cooper County Detention Center in Boonville to be booked. They cannot be released until a judge formally sets their bail amount, or a standard schedule is applied.
-
-Once that amount is set, you need to act fast. Call Jody Story Bail Bonds at (573) 854-9264 right away. We immediately check the jail's system to see the exact charges and the required bail amount. Then, we easily walk you through the agreement.
-
-By state law, you pay a non-refundable fee of 10% of the total bail amount. We specialize in creating custom, affordable payment plans to make this easier on you. We can even handle the paperwork electronically to save time.
-
-Once everything is signed, our agent takes the certified document straight to the booking window at the jail. After the jail staff approves it, the release process begins. We’ll be there to greet your loved one, explain their upcoming court dates, and make sure they get home safely.`,
-    faqs: [
-      {
-        question: "Where is the Cooper County Jail located, and how do I get there?",
-        answer: "The Cooper County Detention Center is located at 200 Main St, Boonville, MO 65233. It serves as the primary holding facility for the entire county."
-      },
-      {
-        question: "Can you assist with arrests made by local police in Boonville?",
-        answer: "Yes, absolutely. Arrests made by local police departments in cities like Boonville, Pilot Grove, Otterville, Bunceton, Wooldridge are ultimately transported to the main Cooper County Jail in Boonville if they require state-level bonding. We manage releases for all these jurisdictions."
-      },
-      {
-        question: "The bond is very high in Cooper County; do you offer financing?",
-        answer: "Yes. Given the severe nature of some charges in this Circuit, bonds can be substantial. We provide highly flexible, tailored financing plans on the 10% premium to ensure that families can secure release without facing immediate economic ruin."
-      },
-      {
-        question: "How long does it take to get released from the Boonville facility?",
-        answer: "Once our agents lodge the certified bond, administrative release usually takes 2 to 4 hours depending on their volume. However, our presence and constant communication with the desk officers ensure it happens as fast as possible."
-      },
-      {
-        question: "What happens if a court date at the Cooper County courthouse is missed?",
-        answer: "Failing to appear will trigger an immediate bench warrant from the judge and initiate bond forfeiture proceedings. If you miss a date, you must call Jody Story Bail Bonds instantly. We can often negotiate a surrender or reinstatement to prevent you from owing the full massive bail amount."
-      }
-    ]
-  },
-  'benton': {
-    overview: `Benton County is a large, busy area covering towns like Warsaw, Lincoln, Cole Camp, Ionia. Because so many people live and travel through here, it's a highly active area for local police and the Sheriff's Office. You need a bail bondsman who knows the county inside and out.
-
-When an arrest happens—whether it's in a busy city like Warsaw or a smaller town—the stress hits you immediately. Trying to figure out the local legal system on your own can feel impossible. That's where Jody Story Bail Bonds comes in. We offer fast, reliable help 24 hours a day and send our agents directly to the jail in Warsaw.
-
-We act as your guide during this stressful time. We keep everything completely confidential, using secure digital paperwork when possible to protect your privacy. We also know that an unexpected arrest can be hard on your wallet. That's why we offer extremely flexible payment plans for the standard 10% fee. Our goal is to get your loved one home without emptying your bank account.`,
-    jailInfo: `The main jail for this area is the Benton County Jail, located at 116 E Washington St, Warsaw, MO 65355. It’s a secure facility that handles people every year. Because they process arrests from Warsaw, Lincoln, and everywhere in between, getting booked can take a long time.
-
-Jody Story Bail Bonds knows exactly how the Warsaw jail works. Our local agents know the staff, the shift changes, and how to submit paperwork correctly the first time. This means we can often avoid the long, frustrating delays that many families face when trying to post bail themselves.
-
-Once a judge sets the bond amount, our agent takes the certified paperwork straight to the booking desk in Warsaw. We keep checking the release queue and working with the officers on duty to speed things up, making sure your loved one spends as little time behind bars as possible.`,
-    courtInfo: `Court cases in Benton County go through the Benton County Circuit Court - Court Circuit 30. It handles serious criminal charges and major civil cases. There are also smaller city courts in places like Warsaw, Lincoln, Cole Camp for traffic tickets and minor crimes.
-
-The judges in this circuit are very strict. They expect you to show up to every single court date, without exception. Jody Story Bail Bonds acts as your partner to make sure you stay out of trouble with the court.
-
-When we post a bond, it’s a serious legal contract. We help you keep track of your confusing court schedules and send you reminders before important dates. If a real emergency causes you to miss a date, our strong reputation with the court clerks can sometimes help us fix the issue before the judge issues a new warrant and takes your bond money.`,
-    localBondProcess: `The bail process in Benton County is very strict. No matter where someone is arrested in the county, they will be taken to the Benton County Jail in Warsaw to be booked. They cannot be released until a judge formally sets their bail amount, or a standard schedule is applied.
-
-Once that amount is set, you need to act fast. Call Jody Story Bail Bonds at (573) 854-9264 right away. We immediately check the jail's system to see the exact charges and the required bail amount. Then, we easily walk you through the agreement.
-
-By state law, you pay a non-refundable fee of 10% of the total bail amount. We specialize in creating custom, affordable payment plans to make this easier on you. We can even handle the paperwork electronically to save time.
-
-Once everything is signed, our agent takes the certified document straight to the booking window at the jail. After the jail staff approves it, the release process begins. We’ll be there to greet your loved one, explain their upcoming court dates, and make sure they get home safely.`,
-    faqs: [
-      {
-        question: "Where is the Benton County Jail located, and how do I get there?",
-        answer: "The Benton County Jail is located at 116 E Washington St, Warsaw, MO 65355. It serves as the primary holding facility for the entire county."
-      },
-      {
-        question: "Can you assist with arrests made by local police in Warsaw?",
-        answer: "Yes, absolutely. Arrests made by local police departments in cities like Warsaw, Lincoln, Cole Camp, Ionia are ultimately transported to the main Benton County Jail in Warsaw if they require state-level bonding. We manage releases for all these jurisdictions."
-      },
-      {
-        question: "The bond is very high in Benton County; do you offer financing?",
-        answer: "Yes. Given the severe nature of some charges in this Circuit, bonds can be substantial. We provide highly flexible, tailored financing plans on the 10% premium to ensure that families can secure release without facing immediate economic ruin."
-      },
-      {
-        question: "How long does it take to get released from the Warsaw facility?",
-        answer: "Once our agents lodge the certified bond, administrative release usually takes 2 to 4 hours depending on their volume. However, our presence and constant communication with the desk officers ensure it happens as fast as possible."
-      },
-      {
-        question: "What happens if a court date at the Benton County courthouse is missed?",
-        answer: "Failing to appear will trigger an immediate bench warrant from the judge and initiate bond forfeiture proceedings. If you miss a date, you must call Jody Story Bail Bonds instantly. We can often negotiate a surrender or reinstatement to prevent you from owing the full massive bail amount."
-      }
-    ]
-  },
-  'hickory': {
-    overview: `Hickory County is a large, busy area covering towns like Hermitage, Wheatland, Preston, Cross Timbers. Because so many people live and travel through here, it's a highly active area for local police and the Sheriff's Office. You need a bail bondsman who knows the county inside and out.
-
-When an arrest happens—whether it's in a busy city like Hermitage or a smaller town—the stress hits you immediately. Trying to figure out the local legal system on your own can feel impossible. That's where Jody Story Bail Bonds comes in. We offer fast, reliable help 24 hours a day and send our agents directly to the jail in Hermitage.
-
-We act as your guide during this stressful time. We keep everything completely confidential, using secure digital paperwork when possible to protect your privacy. We also know that an unexpected arrest can be hard on your wallet. That's why we offer extremely flexible payment plans for the standard 10% fee. Our goal is to get your loved one home without emptying your bank account.`,
-    jailInfo: `The main jail for this area is the Hickory County Jail, located at 116 EE Hwy, Hermitage, MO 65668. It’s a secure facility that handles people every year. Because they process arrests from Hermitage, Wheatland, and everywhere in between, getting booked can take a long time.
-
-Jody Story Bail Bonds knows exactly how the Hermitage jail works. Our local agents know the staff, the shift changes, and how to submit paperwork correctly the first time. This means we can often avoid the long, frustrating delays that many families face when trying to post bail themselves.
-
-Once a judge sets the bond amount, our agent takes the certified paperwork straight to the booking desk in Hermitage. We keep checking the release queue and working with the officers on duty to speed things up, making sure your loved one spends as little time behind bars as possible.`,
-    courtInfo: `Court cases in Hickory County go through the Hickory County Circuit Court - Circuit 30. It handles serious criminal charges and major civil cases. There are also smaller city courts in places like Hermitage, Wheatland, Preston for traffic tickets and minor crimes.
-
-The judges in this circuit are very strict. They expect you to show up to every single court date, without exception. Jody Story Bail Bonds acts as your partner to make sure you stay out of trouble with the court.
-
-When we post a bond, it’s a serious legal contract. We help you keep track of your confusing court schedules and send you reminders before important dates. If a real emergency causes you to miss a date, our strong reputation with the court clerks can sometimes help us fix the issue before the judge issues a new warrant and takes your bond money.`,
-    localBondProcess: `The bail process in Hickory County is very strict. No matter where someone is arrested in the county, they will be taken to the Hickory County Jail in Hermitage to be booked. They cannot be released until a judge formally sets their bail amount, or a standard schedule is applied.
-
-Once that amount is set, you need to act fast. Call Jody Story Bail Bonds at (573) 854-9264 right away. We immediately check the jail's system to see the exact charges and the required bail amount. Then, we easily walk you through the agreement.
-
-By state law, you pay a non-refundable fee of 10% of the total bail amount. We specialize in creating custom, affordable payment plans to make this easier on you. We can even handle the paperwork electronically to save time.
-
-Once everything is signed, our agent takes the certified document straight to the booking window at the jail. After the jail staff approves it, the release process begins. We’ll be there to greet your loved one, explain their upcoming court dates, and make sure they get home safely.`,
-    faqs: [
-      {
-        question: "Where is the Hickory County Jail located, and how do I get there?",
-        answer: "The Hickory County Jail is located at 116 EE Hwy, Hermitage, MO 65668. It serves as the primary holding facility for the entire county."
-      },
-      {
-        question: "Can you assist with arrests made by local police in Hermitage?",
-        answer: "Yes, absolutely. Arrests made by local police departments in cities like Hermitage, Wheatland, Preston, Cross Timbers are ultimately transported to the main Hickory County Jail in Hermitage if they require state-level bonding. We manage releases for all these jurisdictions."
-      },
-      {
-        question: "The bond is very high in Hickory County; do you offer financing?",
-        answer: "Yes. Given the severe nature of some charges in this Circuit, bonds can be substantial. We provide highly flexible, tailored financing plans on the 10% premium to ensure that families can secure release without facing immediate economic ruin."
-      },
-      {
-        question: "How long does it take to get released from the Hermitage facility?",
-        answer: "Once our agents lodge the certified bond, administrative release usually takes 2 to 4 hours depending on their volume. However, our presence and constant communication with the desk officers ensure it happens as fast as possible."
-      },
-      {
-        question: "What happens if a court date at the Hickory County courthouse is missed?",
-        answer: "Failing to appear will trigger an immediate bench warrant from the judge and initiate bond forfeiture proceedings. If you miss a date, you must call Jody Story Bail Bonds instantly. We can often negotiate a surrender or reinstatement to prevent you from owing the full massive bail amount."
-      }
-    ]
-  },
-  'dallas': {
-    overview: `Dallas County is a large, busy area covering towns like Buffalo, Urbana, Louisburg, Plad. Because so many people live and travel through here, it's a highly active area for local police and the Sheriff's Office. You need a bail bondsman who knows the county inside and out.
-
-When an arrest happens—whether it's in a busy city like Buffalo or a smaller town—the stress hits you immediately. Trying to figure out the local legal system on your own can feel impossible. That's where Jody Story Bail Bonds comes in. We offer fast, reliable help 24 hours a day and send our agents directly to the jail in Buffalo.
-
-We act as your guide during this stressful time. We keep everything completely confidential, using secure digital paperwork when possible to protect your privacy. We also know that an unexpected arrest can be hard on your wallet. That's why we offer extremely flexible payment plans for the standard 10% fee. Our goal is to get your loved one home without emptying your bank account.`,
-    jailInfo: `The main jail for this area is the Dallas County Jail, located at 204 S Pine St, Buffalo, MO 65622. It’s a secure facility that handles people every year. Because they process arrests from Buffalo, Urbana, and everywhere in between, getting booked can take a long time.
-
-Jody Story Bail Bonds knows exactly how the Buffalo jail works. Our local agents know the staff, the shift changes, and how to submit paperwork correctly the first time. This means we can often avoid the long, frustrating delays that many families face when trying to post bail themselves.
-
-Once a judge sets the bond amount, our agent takes the certified paperwork straight to the booking desk in Buffalo. We keep checking the release queue and working with the officers on duty to speed things up, making sure your loved one spends as little time behind bars as possible.`,
-    courtInfo: `Court cases in Dallas County go through the Dallas County Circuit Court - Circuit 30. It handles serious criminal charges and major civil cases. There are also smaller city courts in places like Buffalo, Urbana, Louisburg for traffic tickets and minor crimes.
-
-The judges in this circuit are very strict. They expect you to show up to every single court date, without exception. Jody Story Bail Bonds acts as your partner to make sure you stay out of trouble with the court.
-
-When we post a bond, it’s a serious legal contract. We help you keep track of your confusing court schedules and send you reminders before important dates. If a real emergency causes you to miss a date, our strong reputation with the court clerks can sometimes help us fix the issue before the judge issues a new warrant and takes your bond money.`,
-    localBondProcess: `The bail process in Dallas County is very strict. No matter where someone is arrested in the county, they will be taken to the Dallas County Jail in Buffalo to be booked. They cannot be released until a judge formally sets their bail amount, or a standard schedule is applied.
-
-Once that amount is set, you need to act fast. Call Jody Story Bail Bonds at (573) 854-9264 right away. We immediately check the jail's system to see the exact charges and the required bail amount. Then, we easily walk you through the agreement.
-
-By state law, you pay a non-refundable fee of 10% of the total bail amount. We specialize in creating custom, affordable payment plans to make this easier on you. We can even handle the paperwork electronically to save time.
-
-Once everything is signed, our agent takes the certified document straight to the booking window at the jail. After the jail staff approves it, the release process begins. We’ll be there to greet your loved one, explain their upcoming court dates, and make sure they get home safely.`,
-    faqs: [
-      {
-        question: "Where is the Dallas County Jail located, and how do I get there?",
-        answer: "The Dallas County Jail is located at 204 S Pine St, Buffalo, MO 65622. It serves as the primary holding facility for the entire county."
-      },
-      {
-        question: "Can you assist with arrests made by local police in Buffalo?",
-        answer: "Yes, absolutely. Arrests made by local police departments in cities like Buffalo, Urbana, Louisburg, Plad are ultimately transported to the main Dallas County Jail in Buffalo if they require state-level bonding. We manage releases for all these jurisdictions."
-      },
-      {
-        question: "The bond is very high in Dallas County; do you offer financing?",
-        answer: "Yes. Given the severe nature of some charges in this Circuit, bonds can be substantial. We provide highly flexible, tailored financing plans on the 10% premium to ensure that families can secure release without facing immediate economic ruin."
-      },
-      {
-        question: "How long does it take to get released from the Buffalo facility?",
-        answer: "Once our agents lodge the certified bond, administrative release usually takes 2 to 4 hours depending on their volume. However, our presence and constant communication with the desk officers ensure it happens as fast as possible."
-      },
-      {
-        question: "What happens if a court date at the Dallas County courthouse is missed?",
-        answer: "Failing to appear will trigger an immediate bench warrant from the judge and initiate bond forfeiture proceedings. If you miss a date, you must call Jody Story Bail Bonds instantly. We can often negotiate a surrender or reinstatement to prevent you from owing the full massive bail amount."
-      }
-    ]
-  },
-  'polk': {
-    overview: `Polk County is a large, busy area covering towns like Bolivar, Pleasant Hope, Fair Play, Humansville, Morrisville, Aldrich. Because so many people live and travel through here, it's a highly active area for local police and the Sheriff's Office. You need a bail bondsman who knows the county inside and out.
-
-When an arrest happens—whether it's in a busy city like Bolivar or a smaller town—the stress hits you immediately. Trying to figure out the local legal system on your own can feel impossible. That's where Jody Story Bail Bonds comes in. We offer fast, reliable help 24 hours a day and send our agents directly to the jail in Bolivar.
-
-We act as your guide during this stressful time. We keep everything completely confidential, using secure digital paperwork when possible to protect your privacy. We also know that an unexpected arrest can be hard on your wallet. That's why we offer extremely flexible payment plans for the standard 10% fee. Our goal is to get your loved one home without emptying your bank account.`,
-    jailInfo: `The main jail for this area is the Polk County Jail, located at 113 E Jefferson St, Bolivar, MO 65613. It’s a secure facility that handles people every year. Because they process arrests from Bolivar, Pleasant Hope, and everywhere in between, getting booked can take a long time.
-
-Jody Story Bail Bonds knows exactly how the Bolivar jail works. Our local agents know the staff, the shift changes, and how to submit paperwork correctly the first time. This means we can often avoid the long, frustrating delays that many families face when trying to post bail themselves.
-
-Once a judge sets the bond amount, our agent takes the certified paperwork straight to the booking desk in Bolivar. We keep checking the release queue and working with the officers on duty to speed things up, making sure your loved one spends as little time behind bars as possible.`,
-    courtInfo: `Court cases in Polk County go through the Polk County Circuit Court - Circuit 30. It handles serious criminal charges and major civil cases. There are also smaller city courts in places like Bolivar, Pleasant Hope, Fair Play for traffic tickets and minor crimes.
-
-The judges in this circuit are very strict. They expect you to show up to every single court date, without exception. Jody Story Bail Bonds acts as your partner to make sure you stay out of trouble with the court.
-
-When we post a bond, it’s a serious legal contract. We help you keep track of your confusing court schedules and send you reminders before important dates. If a real emergency causes you to miss a date, our strong reputation with the court clerks can sometimes help us fix the issue before the judge issues a new warrant and takes your bond money.`,
-    localBondProcess: `The bail process in Polk County is very strict. No matter where someone is arrested in the county, they will be taken to the Polk County Jail in Bolivar to be booked. They cannot be released until a judge formally sets their bail amount, or a standard schedule is applied.
-
-Once that amount is set, you need to act fast. Call Jody Story Bail Bonds at (573) 854-9264 right away. We immediately check the jail's system to see the exact charges and the required bail amount. Then, we easily walk you through the agreement.
-
-By state law, you pay a non-refundable fee of 10% of the total bail amount. We specialize in creating custom, affordable payment plans to make this easier on you. We can even handle the paperwork electronically to save time.
-
-Once everything is signed, our agent takes the certified document straight to the booking window at the jail. After the jail staff approves it, the release process begins. We’ll be there to greet your loved one, explain their upcoming court dates, and make sure they get home safely.`,
-    faqs: [
-      {
-        question: "Where is the Polk County Jail located, and how do I get there?",
-        answer: "The Polk County Jail is located at 113 E Jefferson St, Bolivar, MO 65613. It serves as the primary holding facility for the entire county."
-      },
-      {
-        question: "Can you assist with arrests made by local police in Bolivar?",
-        answer: "Yes, absolutely. Arrests made by local police departments in cities like Bolivar, Pleasant Hope, Fair Play, Humansville, Morrisville, Aldrich are ultimately transported to the main Polk County Jail in Bolivar if they require state-level bonding. We manage releases for all these jurisdictions."
-      },
-      {
-        question: "The bond is very high in Polk County; do you offer financing?",
-        answer: "Yes. Given the severe nature of some charges in this Circuit, bonds can be substantial. We provide highly flexible, tailored financing plans on the 10% premium to ensure that families can secure release without facing immediate economic ruin."
-      },
-      {
-        question: "How long does it take to get released from the Bolivar facility?",
-        answer: "Once our agents lodge the certified bond, administrative release usually takes 2 to 4 hours depending on their volume. However, our presence and constant communication with the desk officers ensure it happens as fast as possible."
-      },
-      {
-        question: "What happens if a court date at the Polk County courthouse is missed?",
-        answer: "Failing to appear will trigger an immediate bench warrant from the judge and initiate bond forfeiture proceedings. If you miss a date, you must call Jody Story Bail Bonds instantly. We can often negotiate a surrender or reinstatement to prevent you from owing the full massive bail amount."
-      }
-    ]
-  },
-  'webster': {
-    overview: `Webster County is a large, busy area covering towns like Marshfield, Seymour, Rogersville, Niangua, Diggins. Because so many people live and travel through here, it's a highly active area for local police and the Sheriff's Office. You need a bail bondsman who knows the county inside and out.
-
-When an arrest happens—whether it's in a busy city like Marshfield or a smaller town—the stress hits you immediately. Trying to figure out the local legal system on your own can feel impossible. That's where Jody Story Bail Bonds comes in. We offer fast, reliable help 24 hours a day and send our agents directly to the jail in Marshfield.
-
-We act as your guide during this stressful time. We keep everything completely confidential, using secure digital paperwork when possible to protect your privacy. We also know that an unexpected arrest can be hard on your wallet. That's why we offer extremely flexible payment plans for the standard 10% fee. Our goal is to get your loved one home without emptying your bank account.`,
-    jailInfo: `The main jail for this area is the Webster County Jail, located at 101 S Crittenden St, Marshfield, MO 65706. It’s a secure facility that handles people every year. Because they process arrests from Marshfield, Seymour, and everywhere in between, getting booked can take a long time.
-
-Jody Story Bail Bonds knows exactly how the Marshfield jail works. Our local agents know the staff, the shift changes, and how to submit paperwork correctly the first time. This means we can often avoid the long, frustrating delays that many families face when trying to post bail themselves.
-
-Once a judge sets the bond amount, our agent takes the certified paperwork straight to the booking desk in Marshfield. We keep checking the release queue and working with the officers on duty to speed things up, making sure your loved one spends as little time behind bars as possible.`,
-    courtInfo: `Court cases in Webster County go through the Webster County Circuit Court - Circuit 30. It handles serious criminal charges and major civil cases. There are also smaller city courts in places like Marshfield, Seymour, Rogersville for traffic tickets and minor crimes.
-
-The judges in this circuit are very strict. They expect you to show up to every single court date, without exception. Jody Story Bail Bonds acts as your partner to make sure you stay out of trouble with the court.
-
-When we post a bond, it’s a serious legal contract. We help you keep track of your confusing court schedules and send you reminders before important dates. If a real emergency causes you to miss a date, our strong reputation with the court clerks can sometimes help us fix the issue before the judge issues a new warrant and takes your bond money.`,
-    localBondProcess: `The bail process in Webster County is very strict. No matter where someone is arrested in the county, they will be taken to the Webster County Jail in Marshfield to be booked. They cannot be released until a judge formally sets their bail amount, or a standard schedule is applied.
-
-Once that amount is set, you need to act fast. Call Jody Story Bail Bonds at (573) 854-9264 right away. We immediately check the jail's system to see the exact charges and the required bail amount. Then, we easily walk you through the agreement.
-
-By state law, you pay a non-refundable fee of 10% of the total bail amount. We specialize in creating custom, affordable payment plans to make this easier on you. We can even handle the paperwork electronically to save time.
-
-Once everything is signed, our agent takes the certified document straight to the booking window at the jail. After the jail staff approves it, the release process begins. We’ll be there to greet your loved one, explain their upcoming court dates, and make sure they get home safely.`,
-    faqs: [
-      {
-        question: "Where is the Webster County Jail located, and how do I get there?",
-        answer: "The Webster County Jail is located at 101 S Crittenden St, Marshfield, MO 65706. It serves as the primary holding facility for the entire county."
-      },
-      {
-        question: "Can you assist with arrests made by local police in Marshfield?",
-        answer: "Yes, absolutely. Arrests made by local police departments in cities like Marshfield, Seymour, Rogersville, Niangua, Diggins are ultimately transported to the main Webster County Jail in Marshfield if they require state-level bonding. We manage releases for all these jurisdictions."
-      },
-      {
-        question: "The bond is very high in Webster County; do you offer financing?",
-        answer: "Yes. Given the severe nature of some charges in this Circuit, bonds can be substantial. We provide highly flexible, tailored financing plans on the 10% premium to ensure that families can secure release without facing immediate economic ruin."
-      },
-      {
-        question: "How long does it take to get released from the Marshfield facility?",
-        answer: "Once our agents lodge the certified bond, administrative release usually takes 2 to 4 hours depending on their volume. However, our presence and constant communication with the desk officers ensure it happens as fast as possible."
-      },
-      {
-        question: "What happens if a court date at the Webster County courthouse is missed?",
-        answer: "Failing to appear will trigger an immediate bench warrant from the judge and initiate bond forfeiture proceedings. If you miss a date, you must call Jody Story Bail Bonds instantly. We can often negotiate a surrender or reinstatement to prevent you from owing the full massive bail amount."
-      }
-    ]
-  },
-  'st-charles': {
-    overview: `St. Charles County is a large, busy area covering towns like St. Charles, O'Fallon, St. Peters, Wentzville, Lake St. Louis, Cottleville, Weldon Spring. Because so many people live and travel through here, it's a highly active area for local police and the Sheriff's Office. You need a bail bondsman who knows the county inside and out.
-
-When an arrest happens—whether it's in a busy city like St. Charles or a smaller town—the stress hits you immediately. Trying to figure out the local legal system on your own can feel impossible. That's where Jody Story Bail Bonds comes in. We offer fast, reliable help 24 hours a day and send our agents directly to the jail in St. Charles.
-
-We act as your guide during this stressful time. We keep everything completely confidential, using secure digital paperwork when possible to protect your privacy. We also know that an unexpected arrest can be hard on your wallet. That's why we offer extremely flexible payment plans for the standard 10% fee. Our goal is to get your loved one home without emptying your bank account.`,
-    jailInfo: `The main jail for this area is the St. Charles County Department of Corrections, located at 301 N Second St, St. Charles, MO 63301. It’s a secure facility that handles people every year. Because they process arrests from St. Charles, O'Fallon, and everywhere in between, getting booked can take a long time.
-
-Jody Story Bail Bonds knows exactly how the St. Charles jail works. Our local agents know the staff, the shift changes, and how to submit paperwork correctly the first time. This means we can often avoid the long, frustrating delays that many families face when trying to post bail themselves.
-
-Once a judge sets the bond amount, our agent takes the certified paperwork straight to the booking desk in St. Charles. We keep checking the release queue and working with the officers on duty to speed things up, making sure your loved one spends as little time behind bars as possible.`,
-    courtInfo: `Court cases in St. Charles County go through the 11th Judicial Circuit Court of Missouri. It handles serious criminal charges and major civil cases. There are also smaller city courts in places like St. Charles, O'Fallon, St. Peters for traffic tickets and minor crimes.
-
-The judges in this circuit are very strict. They expect you to show up to every single court date, without exception. Jody Story Bail Bonds acts as your partner to make sure you stay out of trouble with the court.
-
-When we post a bond, it’s a serious legal contract. We help you keep track of your confusing court schedules and send you reminders before important dates. If a real emergency causes you to miss a date, our strong reputation with the court clerks can sometimes help us fix the issue before the judge issues a new warrant and takes your bond money.`,
-    localBondProcess: `The bail process in St. Charles County is very strict. No matter where someone is arrested in the county, they will be taken to the St. Charles County Department of Corrections in St. Charles to be booked. They cannot be released until a judge formally sets their bail amount, or a standard schedule is applied.
-
-Once that amount is set, you need to act fast. Call Jody Story Bail Bonds at (573) 854-9264 right away. We immediately check the jail's system to see the exact charges and the required bail amount. Then, we easily walk you through the agreement.
-
-By state law, you pay a non-refundable fee of 10% of the total bail amount. We specialize in creating custom, affordable payment plans to make this easier on you. We can even handle the paperwork electronically to save time.
-
-Once everything is signed, our agent takes the certified document straight to the booking window at the jail. After the jail staff approves it, the release process begins. We’ll be there to greet your loved one, explain their upcoming court dates, and make sure they get home safely.`,
-    faqs: [
-      {
-        question: "Where is the St. Charles County Jail located, and how do I get there?",
-        answer: "The St. Charles County Department of Corrections is located at 301 N Second St, St. Charles, MO 63301. It serves as the primary holding facility for the entire county."
-      },
-      {
-        question: "Can you assist with arrests made by local police in St. Charles?",
-        answer: "Yes, absolutely. Arrests made by local police departments in cities like St. Charles, O'Fallon, St. Peters, Wentzville, Lake St. Louis, Cottleville, Weldon Spring are ultimately transported to the main St. Charles County Jail in St. Charles if they require state-level bonding. We manage releases for all these jurisdictions."
-      },
-      {
-        question: "The bond is very high in St. Charles County; do you offer financing?",
-        answer: "Yes. Given the severe nature of some charges in this Circuit, bonds can be substantial. We provide highly flexible, tailored financing plans on the 10% premium to ensure that families can secure release without facing immediate economic ruin."
-      },
-      {
-        question: "How long does it take to get released from the St. Charles facility?",
-        answer: "Once our agents lodge the certified bond, administrative release usually takes 2 to 4 hours depending on their volume. However, our presence and constant communication with the desk officers ensure it happens as fast as possible."
-      },
-      {
-        question: "What happens if a court date at the St. Charles County courthouse is missed?",
-        answer: "Failing to appear will trigger an immediate bench warrant from the judge and initiate bond forfeiture proceedings. If you miss a date, you must call Jody Story Bail Bonds instantly. We can often negotiate a surrender or reinstatement to prevent you from owing the full massive bail amount."
-      }
-    ]
-  },
-  'crawford': {
-    overview: `Crawford County is a large, busy area covering towns like Steelville, Cuba, Bourbon, West Sullivan. Because so many people live and travel through here, it's a highly active area for local police and the Sheriff's Office. You need a bail bondsman who knows the county inside and out.
-
-When an arrest happens—whether it's in a busy city like Steelville or a smaller town—the stress hits you immediately. Trying to figure out the local legal system on your own can feel impossible. That's where Jody Story Bail Bonds comes in. We offer fast, reliable help 24 hours a day and send our agents directly to the jail in Steelville.
-
-We act as your guide during this stressful time. We keep everything completely confidential, using secure digital paperwork when possible to protect your privacy. We also know that an unexpected arrest can be hard on your wallet. That's why we offer extremely flexible payment plans for the standard 10% fee. Our goal is to get your loved one home without emptying your bank account.`,
-    jailInfo: `The main jail for this area is the Crawford County Jail, located at 212 S Main St, Steelville, MO 65565. It’s a secure facility that handles people every year. Because they process arrests from Steelville, Cuba, and everywhere in between, getting booked can take a long time.
-
-Jody Story Bail Bonds knows exactly how the Steelville jail works. Our local agents know the staff, the shift changes, and how to submit paperwork correctly the first time. This means we can often avoid the long, frustrating delays that many families face when trying to post bail themselves.
-
-Once a judge sets the bond amount, our agent takes the certified paperwork straight to the booking desk in Steelville. We keep checking the release queue and working with the officers on duty to speed things up, making sure your loved one spends as little time behind bars as possible.`,
-    courtInfo: `Court cases in Crawford County go through the Crawford County Circuit Court - 42nd Judicial Circuit. It handles serious criminal charges and major civil cases. There are also smaller city courts in places like Steelville, Cuba, Bourbon for traffic tickets and minor crimes.
-
-The judges in this circuit are very strict. They expect you to show up to every single court date, without exception. Jody Story Bail Bonds acts as your partner to make sure you stay out of trouble with the court.
-
-When we post a bond, it’s a serious legal contract. We help you keep track of your confusing court schedules and send you reminders before important dates. If a real emergency causes you to miss a date, our strong reputation with the court clerks can sometimes help us fix the issue before the judge issues a new warrant and takes your bond money.`,
-    localBondProcess: `The bail process in Crawford County is very strict. No matter where someone is arrested in the county, they will be taken to the Crawford County Jail in Steelville to be booked. They cannot be released until a judge formally sets their bail amount, or a standard schedule is applied.
-
-Once that amount is set, you need to act fast. Call Jody Story Bail Bonds at (573) 854-9264 right away. We immediately check the jail's system to see the exact charges and the required bail amount. Then, we easily walk you through the agreement.
-
-By state law, you pay a non-refundable fee of 10% of the total bail amount. We specialize in creating custom, affordable payment plans to make this easier on you. We can even handle the paperwork electronically to save time.
-
-Once everything is signed, our agent takes the certified document straight to the booking window at the jail. After the jail staff approves it, the release process begins. We’ll be there to greet your loved one, explain their upcoming court dates, and make sure they get home safely.`,
-    faqs: [
-      {
-        question: "Where is the Crawford County Jail located, and how do I get there?",
-        answer: "The Crawford County Jail is located at 212 S Main St, Steelville, MO 65565. It serves as the primary holding facility for the entire county."
-      },
-      {
-        question: "Can you assist with arrests made by local police in Steelville?",
-        answer: "Yes, absolutely. Arrests made by local police departments in cities like Steelville, Cuba, Bourbon, West Sullivan are ultimately transported to the main Crawford County Jail in Steelville if they require state-level bonding. We manage releases for all these jurisdictions."
-      },
-      {
-        question: "The bond is very high in Crawford County; do you offer financing?",
-        answer: "Yes. Given the severe nature of some charges in this Circuit, bonds can be substantial. We provide highly flexible, tailored financing plans on the 10% premium to ensure that families can secure release without facing immediate economic ruin."
-      },
-      {
-        question: "How long does it take to get released from the Steelville facility?",
-        answer: "Once our agents lodge the certified bond, administrative release usually takes 2 to 4 hours depending on their volume. However, our presence and constant communication with the desk officers ensure it happens as fast as possible."
-      },
-      {
-        question: "What happens if a court date at the Crawford County courthouse is missed?",
-        answer: "Failing to appear will trigger an immediate bench warrant from the judge and initiate bond forfeiture proceedings. If you miss a date, you must call Jody Story Bail Bonds instantly. We can often negotiate a surrender or reinstatement to prevent you from owing the full massive bail amount."
-      }
-    ]
-  },
   'reynolds': {
     overview: `Reynolds County is a large, busy area covering towns like Centerville, Ellington, Bunker. Because so many people live and travel through here, it's a highly active area for local police and the Sheriff's Office. You need a bail bondsman who knows the county inside and out.
 
@@ -873,280 +413,94 @@ Once everything is signed, our agent takes the certified document straight to th
       }
     ]
   },
-  'howell': {
-    overview: `Howell County is a large, busy area covering towns like West Plains, Willow Springs, Mountain View, Brandsville. Because so many people live and travel through here, it's a highly active area for local police and the Sheriff's Office. You need a bail bondsman who knows the county inside and out.
+  'stoddard': {
+    overview: `Stoddard County is situated in Southeast Missouri, spanning key communities including Bloomfield (the county seat), Dexter, Bernie, Advance, Puxico, and Bell City. Navigating the legal system following an arrest anywhere along U.S. Highway 60 or Missouri Route 25 requires rapid local intervention. Jody Story Bail Bonds provides round-the-clock, 24/7 bail bond services designed to secure immediate jail release for clients throughout Stoddard County.
 
-When an arrest happens—whether it's in a busy city like West Plains or a smaller town—the stress hits you immediately. Trying to figure out the local legal system on your own can feel impossible. That's where Jody Story Bail Bonds comes in. We offer fast, reliable help 24 hours a day and send our agents directly to the jail in West Plains.
+Our licensed bail agents maintain direct communication with the Stoddard County Sheriff's Department and local municipal authorities. Whether an arrest occurs during a traffic stop on Route 25 or following an incident in downtown Dexter, our dispatch team acts instantly to verify bond amounts, prepare certified surety forms, and lodge paperwork directly with the booking officers in Bloomfield.
 
-We act as your guide during this stressful time. We keep everything completely confidential, using secure digital paperwork when possible to protect your privacy. We also know that an unexpected arrest can be hard on your wallet. That's why we offer extremely flexible payment plans for the standard 10% fee. Our goal is to get your loved one home without emptying your bank account.`,
-    jailInfo: `The main jail for this area is the Howell County Jail, located at 1106 Missouri Ave, West Plains, MO 65775. It’s a secure facility that handles people every year. Because they process arrests from West Plains, Willow Springs, and everywhere in between, getting booked can take a long time.
+We specialize in reducing stress during legal emergencies. We offer affordable 10% statutory premium financing with flexible, budget-friendly payment arrangements, low down payments, and completely confidential consultation to ensure your family member is returned home safely and without financial panic.`,
+    jailInfo: `The primary holding facility for all county and municipal arrests is the Stoddard County Jail, located at 207 S Sisson St, Bloomfield, MO 63825 (Phone: 573-568-4654). The facility operates under the jurisdiction of the Stoddard County Sheriff's Office and handles intake for individuals detained by county deputies, the Missouri State Highway Patrol (Troop E), and city police forces from Dexter, Bernie, and Advance.
 
-Jody Story Bail Bonds knows exactly how the West Plains jail works. Our local agents know the staff, the shift changes, and how to submit paperwork correctly the first time. This means we can often avoid the long, frustrating delays that many families face when trying to post bail themselves.
+Booking procedures at the Bloomfield detention facility involve identity verification, fingerprinting, criminal background checks, and formal bond authorization by a 35th Judicial Circuit judge or predetermined bond schedule. Jody Story Bail Bonds maintains 24/7 coverage at the Sisson Street facility. As soon as a bond is set, our agent arrives on-site to post the required surety, ensuring inmate release is initiated with zero unnecessary delay.`,
+    courtInfo: `Judicial proceedings for Stoddard County are conducted under the 35th Judicial Circuit Court of Missouri, located at the Stoddard County Justice Center (303 S Sisson St, Bloomfield, MO 63825). The court handles felony charges, misdemeanor offenses, traffic violations, and initial bond reduction hearings. Municipal court divisions also operate in Dexter and Bernie for city ordinance violations.
 
-Once a judge sets the bond amount, our agent takes the certified paperwork straight to the booking desk in West Plains. We keep checking the release queue and working with the officers on duty to speed things up, making sure your loved one spends as little time behind bars as possible.`,
-    courtInfo: `Court cases in Howell County go through the Howell County Courthouse - 37th Judicial Circuit. It handles serious criminal charges and major civil cases. There are also smaller city courts in places like West Plains, Willow Springs, Mountain View for traffic tickets and minor crimes.
+Our bail bond office stays synchronized with the 35th Circuit Clerk's office and Case.net dockets. We assist co-signers and defendants by providing automatic court date tracking, appearance notices, and guidance regarding compliance with court conditions (such as drug screening or travel limits) to ensure your bail remains active and collateral remains protected.`,
+    localBondProcess: `Securing a bail bond in Stoddard County follows a straightforward 4-step process with Jody Story Bail Bonds:
 
-The judges in this circuit are very strict. They expect you to show up to every single court date, without exception. Jody Story Bail Bonds acts as your partner to make sure you stay out of trouble with the court.
-
-When we post a bond, it’s a serious legal contract. We help you keep track of your confusing court schedules and send you reminders before important dates. If a real emergency causes you to miss a date, our strong reputation with the court clerks can sometimes help us fix the issue before the judge issues a new warrant and takes your bond money.`,
-    localBondProcess: `The bail process in Howell County is very strict. No matter where someone is arrested in the county, they will be taken to the Howell County Jail in West Plains to be booked. They cannot be released until a judge formally sets their bail amount, or a standard schedule is applied.
-
-Once that amount is set, you need to act fast. Call Jody Story Bail Bonds at (573) 854-9264 right away. We immediately check the jail's system to see the exact charges and the required bail amount. Then, we easily walk you through the agreement.
-
-By state law, you pay a non-refundable fee of 10% of the total bail amount. We specialize in creating custom, affordable payment plans to make this easier on you. We can even handle the paperwork electronically to save time.
-
-Once everything is signed, our agent takes the certified document straight to the booking window at the jail. After the jail staff approves it, the release process begins. We’ll be there to greet your loved one, explain their upcoming court dates, and make sure they get home safely.`,
+1. Immediate Contact: Call our 24/7 emergency hotline at (573) 854-9264 as soon as an arrest occurs or bail is set at the Bloomfield jail.
+2. Verification & Plan: We contact the Stoddard County Jail booking desk to verify exact charges, bond amounts, and conditions, then customize an affordable 10% premium payment plan.
+3. Paperwork Execution: Complete the quick bond agreement electronically via smartphone or in person with our mobile agent.
+4. Fast Jail Release: Our licensed agent hand-delivers certified surety paperwork directly to the Stoddard County Jail officers in Bloomfield, securing release within 1 to 3 hours.`,
     faqs: [
       {
-        question: "Where is the Howell County Jail located, and how do I get there?",
-        answer: "The Howell County Jail is located at 1106 Missouri Ave, West Plains, MO 65775. It serves as the primary holding facility for the entire county."
+        question: "Where is the Stoddard County Jail located and what is its phone number?",
+        answer: "The Stoddard County Jail is located at 207 S Sisson St, Bloomfield, MO 63825. You can reach the jail booking desk at (573) 568-4654, or call Jody Story Bail Bonds 24/7 at (573) 854-9264 for immediate release assistance."
       },
       {
-        question: "Can you assist with arrests made by local police in West Plains?",
-        answer: "Yes, absolutely. Arrests made by local police departments in cities like West Plains, Willow Springs, Mountain View, Brandsville are ultimately transported to the main Howell County Jail in West Plains if they require state-level bonding. We manage releases for all these jurisdictions."
+        question: "Do you provide 24/7 bail bonds for arrests in Dexter, MO?",
+        answer: "Yes! We serve Dexter, Bloomfield, Bernie, Advance, Puxico, and all surrounding areas in Stoddard County 24 hours a day, 7 days a week, including holidays."
       },
       {
-        question: "The bond is very high in Howell County; do you offer financing?",
-        answer: "Yes. Given the severe nature of some charges in this Circuit, bonds can be substantial. We provide highly flexible, tailored financing plans on the 10% premium to ensure that families can secure release without facing immediate economic ruin."
+        question: "How much does a bail bond cost in Stoddard County, Missouri?",
+        answer: "Under Missouri law, standard bail bond premiums are set at 10% of the total bail amount set by the judge. For example, a $5,000 bond requires a $500 fee. Jody Story offers flexible down payments and interest-free installment plans."
       },
       {
-        question: "How long does it take to get released from the West Plains facility?",
-        answer: "Once our agents lodge the certified bond, administrative release usually takes 2 to 4 hours depending on their volume. However, our presence and constant communication with the desk officers ensure it happens as fast as possible."
+        question: "How long does it take to get released from the Bloomfield detention facility?",
+        answer: "Once our licensed agent submits the certified surety bond to the Stoddard County Jail staff in Bloomfield, physical inmate release typically takes between 1 and 3 hours, depending on jail staff workload and shift changes."
       },
       {
-        question: "What happens if a court date at the Howell County courthouse is missed?",
-        answer: "Failing to appear will trigger an immediate bench warrant from the judge and initiate bond forfeiture proceedings. If you miss a date, you must call Jody Story Bail Bonds instantly. We can often negotiate a surrender or reinstatement to prevent you from owing the full massive bail amount."
+        question: "What happens if someone misses a court date at the Stoddard County Courthouse?",
+        answer: "Failing to appear at the 35th Judicial Circuit Court in Bloomfield results in an immediate failure to appear (FTA) bench warrant and potential bond forfeiture. If a date is missed, call Jody Story Bail Bonds immediately so we can help arrange a voluntary court surrender or bond reinstatement."
+      },
+      {
+        question: "What payment options are accepted for Stoddard County bail bonds?",
+        answer: "We accept credit cards, debit cards, cash, bank wire transfers, and certified checks. Customized financing and flexible payment schedules are available for qualified co-signers."
       }
     ]
   },
-  'oregon': {
-    overview: `Oregon County is a large, busy area covering towns like Alton, Thayer, Koshkonong. Because so many people live and travel through here, it's a highly active area for local police and the Sheriff's Office. You need a bail bondsman who knows the county inside and out.
+  'dunklin': {
+    overview: `Dunklin County, positioned in the heart of the Missouri Bootheel, encompasses Kennett (the county seat), Malden, Senath, Campbell, Clarkton, Holcomb, and Hornersville. Transport corridors like U.S. Highway 412, Missouri Route 25, and Route 84 see active local law enforcement and Highway Patrol enforcement. When a legal emergency arises, Jody Story Bail Bonds delivers fast, authoritative 24/7 bail bond services across Dunklin County.
 
-When an arrest happens—whether it's in a busy city like Alton or a smaller town—the stress hits you immediately. Trying to figure out the local legal system on your own can feel impossible. That's where Jody Story Bail Bonds comes in. We offer fast, reliable help 24 hours a day and send our agents directly to the jail in Alton.
+When a loved one is detained, timing is essential. Our experienced, licensed Missouri bail agents maintain continuous liaison with the Dunklin County Sheriff's Department and municipal police divisions in Kennett and Malden. We quickly review bail orders, explain co-signer responsibilities, and dispatch agents directly to the jail facility in Kennett.
 
-We act as your guide during this stressful time. We keep everything completely confidential, using secure digital paperwork when possible to protect your privacy. We also know that an unexpected arrest can be hard on your wallet. That's why we offer extremely flexible payment plans for the standard 10% fee. Our goal is to get your loved one home without emptying your bank account.`,
-    jailInfo: `The main jail for this area is the Oregon County Jail, located at Court Square, Alton, MO 65606. It’s a secure facility that handles people every year. Because they process arrests from Alton, Thayer, and everywhere in between, getting booked can take a long time.
+We prioritize affordability and family relief. By offering low down payment financing options on the standard 10% state premium, transparent payment terms, and 100% confidential service, we ensure getting out of jail is quick and stress-free.`,
+    jailInfo: `All individuals detained within Dunklin County are processed and held at the Dunklin County Justice Center, located at 1175 County Road 521, Kennett, MO 63857 (Phone: 573-888-4010). The Justice Center is a modern detention facility operated by the Dunklin County Sheriff's Office, accommodating prisoners from county deputies, Highway Patrol Troop E, and municipal police departments including Kennett PD and Malden PD.
 
-Jody Story Bail Bonds knows exactly how the Alton jail works. Our local agents know the staff, the shift changes, and how to submit paperwork correctly the first time. This means we can often avoid the long, frustrating delays that many families face when trying to post bail themselves.
+Inmate booking involves criminal background screening, warrant checks, fingerprinting, and mugshot recording. Once bail is set by a magistrate or statutory bail schedule, Jody Story Bail Bonds files official surety bonds directly with the Justice Center booking officers, enabling immediate release processing 24 hours a day.`,
+    courtInfo: `Legal matters in Dunklin County fall under the 35th Judicial Circuit Court of Missouri, centered at the Dunklin County Courthouse (100 Diver St, Kennett, MO 63857). The circuit handles criminal felonies, misdemeanors, and preliminary hearings. Municipal court divisions are also held in Kennett and Malden for city ordinance charges.
 
-Once a judge sets the bond amount, our agent takes the certified paperwork straight to the booking desk in Alton. We keep checking the release queue and working with the officers on duty to speed things up, making sure your loved one spends as little time behind bars as possible.`,
-    courtInfo: `Court cases in Oregon County go through the Oregon County Circuit Court - 37th Judicial Circuit. It handles serious criminal charges and major civil cases. There are also smaller city courts in places like Alton, Thayer, Koshkonong for traffic tickets and minor crimes.
+Our agency works closely with the 35th Circuit Court Clerk to monitor case filings, track upcoming court appearances via Missouri Case.net, and inform co-signers of hearing dates. Maintaining strict court attendance guarantees that your bond stays valid and protects your collateral from forfeiture.`,
+    localBondProcess: `Navigating bail release at the Dunklin County Justice Center is simple with our 4-step dispatch system:
 
-The judges in this circuit are very strict. They expect you to show up to every single court date, without exception. Jody Story Bail Bonds acts as your partner to make sure you stay out of trouble with the court.
-
-When we post a bond, it’s a serious legal contract. We help you keep track of your confusing court schedules and send you reminders before important dates. If a real emergency causes you to miss a date, our strong reputation with the court clerks can sometimes help us fix the issue before the judge issues a new warrant and takes your bond money.`,
-    localBondProcess: `The bail process in Oregon County is very strict. No matter where someone is arrested in the county, they will be taken to the Oregon County Jail in Alton to be booked. They cannot be released until a judge formally sets their bail amount, or a standard schedule is applied.
-
-Once that amount is set, you need to act fast. Call Jody Story Bail Bonds at (573) 854-9264 right away. We immediately check the jail's system to see the exact charges and the required bail amount. Then, we easily walk you through the agreement.
-
-By state law, you pay a non-refundable fee of 10% of the total bail amount. We specialize in creating custom, affordable payment plans to make this easier on you. We can even handle the paperwork electronically to save time.
-
-Once everything is signed, our agent takes the certified document straight to the booking window at the jail. After the jail staff approves it, the release process begins. We’ll be there to greet your loved one, explain their upcoming court dates, and make sure they get home safely.`,
+1. 24/7 Call: Call Jody Story Bail Bonds at (573) 854-9264 as soon as the defendant is booked or bail is set.
+2. Case Lookup: Our agent contacts the Dunklin County Justice Center booking room in Kennett to verify charges, warrant status, and exact bail amounts.
+3. Flexible Setup: We establish an affordable payment plan for the 10% state premium and complete the bond agreement online or in person.
+4. Direct Posting: Our licensed agent hand-delivers certified bond forms to jail officers at 1175 County Road 521 in Kennett to initiate rapid release.`,
     faqs: [
       {
-        question: "Where is the Oregon County Jail located, and how do I get there?",
-        answer: "The Oregon County Jail is located at Court Square, Alton, MO 65606. It serves as the primary holding facility for the entire county."
+        question: "Where is the Dunklin County Justice Center located and what is the phone number?",
+        answer: "The Dunklin County Justice Center is located at 1175 County Road 521, Kennett, MO 63857. The main desk phone number is (573) 888-4010. Call Jody Story Bail Bonds 24/7 at (573) 854-9264 for immediate bail processing."
       },
       {
-        question: "Can you assist with arrests made by local police in Alton?",
-        answer: "Yes, absolutely. Arrests made by local police departments in cities like Alton, Thayer, Koshkonong are ultimately transported to the main Oregon County Jail in Alton if they require state-level bonding. We manage releases for all these jurisdictions."
+        question: "Can you post bond for arrests in Malden, Senath, or Campbell?",
+        answer: "Yes! We provide 24/7 bail bond coverage for Kennett, Malden, Senath, Campbell, Clarkton, Holcomb, and every municipality across Dunklin County."
       },
       {
-        question: "The bond is very high in Oregon County; do you offer financing?",
-        answer: "Yes. Given the severe nature of some charges in this Circuit, bonds can be substantial. We provide highly flexible, tailored financing plans on the 10% premium to ensure that families can secure release without facing immediate economic ruin."
+        question: "How much is bail bond premium in Dunklin County, MO?",
+        answer: "Missouri law mandates a 10% premium fee for licensed bail bond services. On a $10,000 bond, the required fee is $1,000. Jody Story Bail Bonds offers flexible payment options and financing with low initial down payments."
       },
       {
-        question: "How long does it take to get released from the Alton facility?",
-        answer: "Once our agents lodge the certified bond, administrative release usually takes 2 to 4 hours depending on their volume. However, our presence and constant communication with the desk officers ensure it happens as fast as possible."
+        question: "How long does release take at the Dunklin County Justice Center?",
+        answer: "Once our agent delivers the certified surety bond to the Justice Center in Kennett, inmate release usually takes between 1 and 3 hours, depending on booking room activity and shift changes."
       },
       {
-        question: "What happens if a court date at the Oregon County courthouse is missed?",
-        answer: "Failing to appear will trigger an immediate bench warrant from the judge and initiate bond forfeiture proceedings. If you miss a date, you must call Jody Story Bail Bonds instantly. We can often negotiate a surrender or reinstatement to prevent you from owing the full massive bail amount."
+        question: "What happens if a defendant misses court at the Dunklin County Courthouse in Kennett?",
+        answer: "Missing a scheduled appearance at the 35th Judicial Circuit Court results in a bench warrant for arrest and initiates bond forfeiture. Call Jody Story Bail Bonds immediately if a court date is missed so we can help coordinate a court surrender or motion to set aside the warrant."
+      },
+      {
+        question: "What do I need to co-sign a bail bond in Dunklin County?",
+        answer: "A co-signer needs a valid state photo ID, proof of income or employment, and ability to make the initial down payment. We guide you through the fast, confidential agreement in minutes."
       }
     ]
-  },
-  'shannon': {
-    overview: `Shannon County is a large, busy area covering towns like Eminence, Winona, Birch Tree. Because so many people live and travel through here, it's a highly active area for local police and the Sheriff's Office. You need a bail bondsman who knows the county inside and out.
-
-When an arrest happens—whether it's in a busy city like Eminence or a smaller town—the stress hits you immediately. Trying to figure out the local legal system on your own can feel impossible. That's where Jody Story Bail Bonds comes in. We offer fast, reliable help 24 hours a day and send our agents directly to the jail in Eminence.
-
-We act as your guide during this stressful time. We keep everything completely confidential, using secure digital paperwork when possible to protect your privacy. We also know that an unexpected arrest can be hard on your wallet. That's why we offer extremely flexible payment plans for the standard 10% fee. Our goal is to get your loved one home without emptying your bank account.`,
-    jailInfo: `The main jail for this area is the Shannon County Jail, located at Main St, Eminence, MO 65466. It’s a secure facility that handles people every year. Because they process arrests from Eminence, Winona, and everywhere in between, getting booked can take a long time.
-
-Jody Story Bail Bonds knows exactly how the Eminence jail works. Our local agents know the staff, the shift changes, and how to submit paperwork correctly the first time. This means we can often avoid the long, frustrating delays that many families face when trying to post bail themselves.
-
-Once a judge sets the bond amount, our agent takes the certified paperwork straight to the booking desk in Eminence. We keep checking the release queue and working with the officers on duty to speed things up, making sure your loved one spends as little time behind bars as possible.`,
-    courtInfo: `Court cases in Shannon County go through the Shannon County Courthouse - 37th Judicial Circuit. It handles serious criminal charges and major civil cases. There are also smaller city courts in places like Eminence, Winona, Birch Tree for traffic tickets and minor crimes.
-
-The judges in this circuit are very strict. They expect you to show up to every single court date, without exception. Jody Story Bail Bonds acts as your partner to make sure you stay out of trouble with the court.
-
-When we post a bond, it’s a serious legal contract. We help you keep track of your confusing court schedules and send you reminders before important dates. If a real emergency causes you to miss a date, our strong reputation with the court clerks can sometimes help us fix the issue before the judge issues a new warrant and takes your bond money.`,
-    localBondProcess: `The bail process in Shannon County is very strict. No matter where someone is arrested in the county, they will be taken to the Shannon County Jail in Eminence to be booked. They cannot be released until a judge formally sets their bail amount, or a standard schedule is applied.
-
-Once that amount is set, you need to act fast. Call Jody Story Bail Bonds at (573) 854-9264 right away. We immediately check the jail's system to see the exact charges and the required bail amount. Then, we easily walk you through the agreement.
-
-By state law, you pay a non-refundable fee of 10% of the total bail amount. We specialize in creating custom, affordable payment plans to make this easier on you. We can even handle the paperwork electronically to save time.
-
-Once everything is signed, our agent takes the certified document straight to the booking window at the jail. After the jail staff approves it, the release process begins. We’ll be there to greet your loved one, explain their upcoming court dates, and make sure they get home safely.`,
-    faqs: [
-      {
-        question: "Where is the Shannon County Jail located, and how do I get there?",
-        answer: "The Shannon County Jail is located at Main St, Eminence, MO 65466. It serves as the primary holding facility for the entire county."
-      },
-      {
-        question: "Can you assist with arrests made by local police in Eminence?",
-        answer: "Yes, absolutely. Arrests made by local police departments in cities like Eminence, Winona, Birch Tree are ultimately transported to the main Shannon County Jail in Eminence if they require state-level bonding. We manage releases for all these jurisdictions."
-      },
-      {
-        question: "The bond is very high in Shannon County; do you offer financing?",
-        answer: "Yes. Given the severe nature of some charges in this Circuit, bonds can be substantial. We provide highly flexible, tailored financing plans on the 10% premium to ensure that families can secure release without facing immediate economic ruin."
-      },
-      {
-        question: "How long does it take to get released from the Eminence facility?",
-        answer: "Once our agents lodge the certified bond, administrative release usually takes 2 to 4 hours depending on their volume. However, our presence and constant communication with the desk officers ensure it happens as fast as possible."
-      },
-      {
-        question: "What happens if a court date at the Shannon County courthouse is missed?",
-        answer: "Failing to appear will trigger an immediate bench warrant from the judge and initiate bond forfeiture proceedings. If you miss a date, you must call Jody Story Bail Bonds instantly. We can often negotiate a surrender or reinstatement to prevent you from owing the full massive bail amount."
-      }
-    ]
-  },
-  'carter': {
-    overview: `Carter County is a large, busy area covering towns like Van Buren, Ellsinore, Hunter. Because so many people live and travel through here, it's a highly active area for local police and the Sheriff's Office. You need a bail bondsman who knows the county inside and out.
-
-When an arrest happens—whether it's in a busy city like Van Buren or a smaller town—the stress hits you immediately. Trying to figure out the local legal system on your own can feel impossible. That's where Jody Story Bail Bonds comes in. We offer fast, reliable help 24 hours a day and send our agents directly to the jail in Van Buren.
-
-We act as your guide during this stressful time. We keep everything completely confidential, using secure digital paperwork when possible to protect your privacy. We also know that an unexpected arrest can be hard on your wallet. That's why we offer extremely flexible payment plans for the standard 10% fee. Our goal is to get your loved one home without emptying your bank account.`,
-    jailInfo: `The main jail for this area is the Carter County Jail, located at 105 Court St, Van Buren, MO 63965. It’s a secure facility that handles people every year. Because they process arrests from Van Buren, Ellsinore, and everywhere in between, getting booked can take a long time.
-
-Jody Story Bail Bonds knows exactly how the Van Buren jail works. Our local agents know the staff, the shift changes, and how to submit paperwork correctly the first time. This means we can often avoid the long, frustrating delays that many families face when trying to post bail themselves.
-
-Once a judge sets the bond amount, our agent takes the certified paperwork straight to the booking desk in Van Buren. We keep checking the release queue and working with the officers on duty to speed things up, making sure your loved one spends as little time behind bars as possible.`,
-    courtInfo: `Court cases in Carter County go through the Carter County Circuit Court - 37th Judicial Circuit. It handles serious criminal charges and major civil cases. There are also smaller city courts in places like Van Buren, Ellsinore, Hunter for traffic tickets and minor crimes.
-
-The judges in this circuit are very strict. They expect you to show up to every single court date, without exception. Jody Story Bail Bonds acts as your partner to make sure you stay out of trouble with the court.
-
-When we post a bond, it’s a serious legal contract. We help you keep track of your confusing court schedules and send you reminders before important dates. If a real emergency causes you to miss a date, our strong reputation with the court clerks can sometimes help us fix the issue before the judge issues a new warrant and takes your bond money.`,
-    localBondProcess: `The bail process in Carter County is very strict. No matter where someone is arrested in the county, they will be taken to the Carter County Jail in Van Buren to be booked. They cannot be released until a judge formally sets their bail amount, or a standard schedule is applied.
-
-Once that amount is set, you need to act fast. Call Jody Story Bail Bonds at (573) 854-9264 right away. We immediately check the jail's system to see the exact charges and the required bail amount. Then, we easily walk you through the agreement.
-
-By state law, you pay a non-refundable fee of 10% of the total bail amount. We specialize in creating custom, affordable payment plans to make this easier on you. We can even handle the paperwork electronically to save time.
-
-Once everything is signed, our agent takes the certified document straight to the booking window at the jail. After the jail staff approves it, the release process begins. We’ll be there to greet your loved one, explain their upcoming court dates, and make sure they get home safely.`,
-    faqs: [
-      {
-        question: "Where is the Carter County Jail located, and how do I get there?",
-        answer: "The Carter County Jail is located at 105 Court St, Van Buren, MO 63965. It serves as the primary holding facility for the entire county."
-      },
-      {
-        question: "Can you assist with arrests made by local police in Van Buren?",
-        answer: "Yes, absolutely. Arrests made by local police departments in cities like Van Buren, Ellsinore, Hunter are ultimately transported to the main Carter County Jail in Van Buren if they require state-level bonding. We manage releases for all these jurisdictions."
-      },
-      {
-        question: "The bond is very high in Carter County; do you offer financing?",
-        answer: "Yes. Given the severe nature of some charges in this Circuit, bonds can be substantial. We provide highly flexible, tailored financing plans on the 10% premium to ensure that families can secure release without facing immediate economic ruin."
-      },
-      {
-        question: "How long does it take to get released from the Van Buren facility?",
-        answer: "Once our agents lodge the certified bond, administrative release usually takes 2 to 4 hours depending on their volume. However, our presence and constant communication with the desk officers ensure it happens as fast as possible."
-      },
-      {
-        question: "What happens if a court date at the Carter County courthouse is missed?",
-        answer: "Failing to appear will trigger an immediate bench warrant from the judge and initiate bond forfeiture proceedings. If you miss a date, you must call Jody Story Bail Bonds instantly. We can often negotiate a surrender or reinstatement to prevent you from owing the full massive bail amount."
-      }
-    ]
-  },
-  'ripley': {
-    overview: `Ripley County is a large, busy area covering towns like Doniphan, Naylor, Fairdealing. Because so many people live and travel through here, it's a highly active area for local police and the Sheriff's Office. You need a bail bondsman who knows the county inside and out.
-
-When an arrest happens—whether it's in a busy city like Doniphan or a smaller town—the stress hits you immediately. Trying to figure out the local legal system on your own can feel impossible. That's where Jody Story Bail Bonds comes in. We offer fast, reliable help 24 hours a day and send our agents directly to the jail in Doniphan.
-
-We act as your guide during this stressful time. We keep everything completely confidential, using secure digital paperwork when possible to protect your privacy. We also know that an unexpected arrest can be hard on your wallet. That's why we offer extremely flexible payment plans for the standard 10% fee. Our goal is to get your loved one home without emptying your bank account.`,
-    jailInfo: `The main jail for this area is the Ripley County Jail, located at 110 Capitol Ave, Doniphan, MO 63935. It’s a secure facility that handles people every year. Because they process arrests from Doniphan, Naylor, and everywhere in between, getting booked can take a long time.
-
-Jody Story Bail Bonds knows exactly how the Doniphan jail works. Our local agents know the staff, the shift changes, and how to submit paperwork correctly the first time. This means we can often avoid the long, frustrating delays that many families face when trying to post bail themselves.
-
-Once a judge sets the bond amount, our agent takes the certified paperwork straight to the booking desk in Doniphan. We keep checking the release queue and working with the officers on duty to speed things up, making sure your loved one spends as little time behind bars as possible.`,
-    courtInfo: `Court cases in Ripley County go through the Ripley County Circuit Court - 36th Judicial Circuit. It handles serious criminal charges and major civil cases. There are also smaller city courts in places like Doniphan, Naylor, Fairdealing for traffic tickets and minor crimes.
-
-The judges in this circuit are very strict. They expect you to show up to every single court date, without exception. Jody Story Bail Bonds acts as your partner to make sure you stay out of trouble with the court.
-
-When we post a bond, it’s a serious legal contract. We help you keep track of your confusing court schedules and send you reminders before important dates. If a real emergency causes you to miss a date, our strong reputation with the court clerks can sometimes help us fix the issue before the judge issues a new warrant and takes your bond money.`,
-    localBondProcess: `The bail process in Ripley County is very strict. No matter where someone is arrested in the county, they will be taken to the Ripley County Jail in Doniphan to be booked. They cannot be released until a judge formally sets their bail amount, or a standard schedule is applied.
-
-Once that amount is set, you need to act fast. Call Jody Story Bail Bonds at (573) 854-9264 right away. We immediately check the jail's system to see the exact charges and the required bail amount. Then, we easily walk you through the agreement.
-
-By state law, you pay a non-refundable fee of 10% of the total bail amount. We specialize in creating custom, affordable payment plans to make this easier on you. We can even handle the paperwork electronically to save time.
-
-Once everything is signed, our agent takes the certified document straight to the booking window at the jail. After the jail staff approves it, the release process begins. We’ll be there to greet your loved one, explain their upcoming court dates, and make sure they get home safely.`,
-    faqs: [
-      {
-        question: "Where is the Ripley County Jail located, and how do I get there?",
-        answer: "The Ripley County Jail is located at 110 Capitol Ave, Doniphan, MO 63935. It serves as the primary holding facility for the entire county."
-      },
-      {
-        question: "Can you assist with arrests made by local police in Doniphan?",
-        answer: "Yes, absolutely. Arrests made by local police departments in cities like Doniphan, Naylor, Fairdealing are ultimately transported to the main Ripley County Jail in Doniphan if they require state-level bonding. We manage releases for all these jurisdictions."
-      },
-      {
-        question: "The bond is very high in Ripley County; do you offer financing?",
-        answer: "Yes. Given the severe nature of some charges in this Circuit, bonds can be substantial. We provide highly flexible, tailored financing plans on the 10% premium to ensure that families can secure release without facing immediate economic ruin."
-      },
-      {
-        question: "How long does it take to get released from the Doniphan facility?",
-        answer: "Once our agents lodge the certified bond, administrative release usually takes 2 to 4 hours depending on their volume. However, our presence and constant communication with the desk officers ensure it happens as fast as possible."
-      },
-      {
-        question: "What happens if a court date at the Ripley County courthouse is missed?",
-        answer: "Failing to appear will trigger an immediate bench warrant from the judge and initiate bond forfeiture proceedings. If you miss a date, you must call Jody Story Bail Bonds instantly. We can often negotiate a surrender or reinstatement to prevent you from owing the full massive bail amount."
-      }
-    ]
-  },
-  'butler': {
-    overview: `Butler County is a large, busy area covering towns like Poplar Bluff, Qulin, Fisk, Neelyville. Because so many people live and travel through here, it's a highly active area for local police and the Sheriff's Office. You need a bail bondsman who knows the county inside and out.
-
-When an arrest happens—whether it's in a busy city like Poplar Bluff or a smaller town—the stress hits you immediately. Trying to figure out the local legal system on your own can feel impossible. That's where Jody Story Bail Bonds comes in. We offer fast, reliable help 24 hours a day and send our agents directly to the jail in Poplar Bluff.
-
-We act as your guide during this stressful time. We keep everything completely confidential, using secure digital paperwork when possible to protect your privacy. We also know that an unexpected arrest can be hard on your wallet. That's why we offer extremely flexible payment plans for the standard 10% fee. Our goal is to get your loved one home without emptying your bank account.`,
-    jailInfo: `The main jail for this area is the Butler County Jail, located at 200 Oak St, Poplar Bluff, MO 63901. It’s a secure facility that handles people every year. Because they process arrests from Poplar Bluff, Qulin, and everywhere in between, getting booked can take a long time.
-
-Jody Story Bail Bonds knows exactly how the Poplar Bluff jail works. Our local agents know the staff, the shift changes, and how to submit paperwork correctly the first time. This means we can often avoid the long, frustrating delays that many families face when trying to post bail themselves.
-
-Once a judge sets the bond amount, our agent takes the certified paperwork straight to the booking desk in Poplar Bluff. We keep checking the release queue and working with the officers on duty to speed things up, making sure your loved one spends as little time behind bars as possible.`,
-    courtInfo: `Court cases in Butler County go through the Butler County Courthouse - 36th Judicial Circuit. It handles serious criminal charges and major civil cases. There are also smaller city courts in places like Poplar Bluff, Qulin, Fisk for traffic tickets and minor crimes.
-
-The judges in this circuit are very strict. They expect you to show up to every single court date, without exception. Jody Story Bail Bonds acts as your partner to make sure you stay out of trouble with the court.
-
-When we post a bond, it’s a serious legal contract. We help you keep track of your confusing court schedules and send you reminders before important dates. If a real emergency causes you to miss a date, our strong reputation with the court clerks can sometimes help us fix the issue before the judge issues a new warrant and takes your bond money.`,
-    localBondProcess: `The bail process in Butler County is very strict. No matter where someone is arrested in the county, they will be taken to the Butler County Jail in Poplar Bluff to be booked. They cannot be released until a judge formally sets their bail amount, or a standard schedule is applied.
-
-Once that amount is set, you need to act fast. Call Jody Story Bail Bonds at (573) 854-9264 right away. We immediately check the jail's system to see the exact charges and the required bail amount. Then, we easily walk you through the agreement.
-
-By state law, you pay a non-refundable fee of 10% of the total bail amount. We specialize in creating custom, affordable payment plans to make this easier on you. We can even handle the paperwork electronically to save time.
-
-Once everything is signed, our agent takes the certified document straight to the booking window at the jail. After the jail staff approves it, the release process begins. We’ll be there to greet your loved one, explain their upcoming court dates, and make sure they get home safely.`,
-    faqs: [
-      {
-        question: "Where is the Butler County Jail located, and how do I get there?",
-        answer: "The Butler County Jail is located at 200 Oak St, Poplar Bluff, MO 63901. It serves as the primary holding facility for the entire county."
-      },
-      {
-        question: "Can you assist with arrests made by local police in Poplar Bluff?",
-        answer: "Yes, absolutely. Arrests made by local police departments in cities like Poplar Bluff, Qulin, Fisk, Neelyville are ultimately transported to the main Butler County Jail in Poplar Bluff if they require state-level bonding. We manage releases for all these jurisdictions."
-      },
-      {
-        question: "The bond is very high in Butler County; do you offer financing?",
-        answer: "Yes. Given the severe nature of some charges in this Circuit, bonds can be substantial. We provide highly flexible, tailored financing plans on the 10% premium to ensure that families can secure release without facing immediate economic ruin."
-      },
-      {
-        question: "How long does it take to get released from the Poplar Bluff facility?",
-        answer: "Once our agents lodge the certified bond, administrative release usually takes 2 to 4 hours depending on their volume. However, our presence and constant communication with the desk officers ensure it happens as fast as possible."
-      },
-      {
-        question: "What happens if a court date at the Butler County courthouse is missed?",
-        answer: "Failing to appear will trigger an immediate bench warrant from the judge and initiate bond forfeiture proceedings. If you miss a date, you must call Jody Story Bail Bonds instantly. We can often negotiate a surrender or reinstatement to prevent you from owing the full massive bail amount."
-      }
-    ]
-  },
+  }
 };
