@@ -112,6 +112,39 @@ async function startServer() {
     return res.status(404).send("<error>Sitemap not found</error>");
   });
 
+  // Dedicated case-insensitive handler for official brand logos & photos
+  const LOGO_FILENAMES = [
+    "Jody_Story_Bailbonds_Logo.jpg",
+    "jody_story_bailbonds_logo.jpg",
+    "jody_story_logo.jpg",
+    "logo.jpg",
+    "logo.png",
+    "jody_story_bailbonds.jpg"
+  ];
+
+  LOGO_FILENAMES.forEach((filename) => {
+    app.get(`/${filename}`, (req, res) => {
+      res.setHeader("Content-Type", "image/jpeg");
+      res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+      
+      const publicPath = path.join(process.cwd(), "public", filename);
+      const distPath = path.join(process.cwd(), "dist", filename);
+      const fallbackPublicLogo = path.join(process.cwd(), "public", "Jody_Story_Bailbonds_Logo.jpg");
+      
+      if (fs.existsSync(publicPath)) {
+        return res.sendFile(publicPath);
+      }
+      if (fs.existsSync(distPath)) {
+        return res.sendFile(distPath);
+      }
+      if (fs.existsSync(fallbackPublicLogo)) {
+        return res.sendFile(fallbackPublicLogo);
+      }
+      return res.status(404).send("Image not found");
+    });
+  });
+
+
   // Recognized active Missouri service areas
   const VALID_COUNTIES = new Set([
     'washington', 'st-francois', 'ste-genevieve', 'madison', 'franklin', 'iron', 'dent', 'wayne', 'reynolds', 'stoddard', 'dunklin'
