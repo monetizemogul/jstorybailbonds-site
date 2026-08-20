@@ -6,6 +6,7 @@ import { Resend } from 'resend';
 import compression from "compression";
 import { GoogleGenAI } from "@google/genai";
 import dotenv from 'dotenv';
+import { getSeoForPath } from "./src/utils/seoData";
 
 dotenv.config();
 
@@ -145,14 +146,50 @@ async function startServer() {
   });
 
 
-  // Recognized active Missouri service areas
+  // Recognized active Missouri service areas (11 primary counties)
   const VALID_COUNTIES = new Set([
     'washington', 'st-francois', 'ste-genevieve', 'madison', 'franklin', 'iron', 'dent', 'wayne', 'reynolds', 'stoddard', 'dunklin'
   ]);
 
+
   const VALID_CITIES = new Set([
     'potosi', 'farmington', 'park-hills', 'bonne-terre', 'ste-genevieve-city', 'fredericktown', 'union', 'washington-city', 'ironton', 'salem', 'greenville', 'ellington', 'bloomfield', 'dexter', 'kennett', 'malden'
   ]);
+
+  const STANDARD_SITE_ROUTES = new Set([
+    'services', 'contact', 'calculator', 'bail-calculator', 'faq', 'how-it-works', 'process', 'service-areas', 'locations', 'about', 'reviews', 'warrants', 'jail-release', 'privacy', 'terms', 'licensing', 'resources', 'disclaimer'
+  ]);
+
+  const CITY_SHORTCUTS: Record<string, string> = {
+    '/bonne-terre': '/bonne-terre-mo-bail-bonds--24/7-jail-release-services',
+    '/service-area/city/bonne-terre': '/bonne-terre-mo-bail-bonds--24/7-jail-release-services',
+    '/ironton': '/ironton-bail-bonds-247-jail-release',
+    '/service-area/city/ironton': '/ironton-bail-bonds-247-jail-release',
+    '/potosi': '/service-area/city/potosi',
+    '/farmington': '/service-area/city/farmington',
+    '/park-hills': '/service-area/city/park-hills',
+    '/union': '/service-area/city/union',
+    '/salem': '/service-area/city/salem',
+    '/fredericktown': '/service-area/city/fredericktown',
+    '/greenville': '/service-area/city/greenville',
+    '/ellington': '/service-area/city/ellington',
+    '/bloomfield': '/service-area/city/bloomfield',
+    '/dexter': '/service-area/city/dexter',
+    '/kennett': '/service-area/city/kennett',
+    '/malden': '/service-area/city/malden',
+    '/felony-bail-bonds': '/',
+    '/misdemeanor-bail-bonds': '/',
+    '/dui-bail-bonds': '/',
+    '/24-hour-bail-bonds': '/',
+    '/bail-bonds': '/',
+    '/bondsman': '/'
+  };
+
+  // Add county shortcuts (e.g. /washington -> /service-area/washington)
+  VALID_COUNTIES.forEach((county) => {
+    CITY_SHORTCUTS[`/${county}`] = `/service-area/${county}`;
+    CITY_SHORTCUTS[`/${county}-county`] = `/service-area/${county}`;
+  });
 
   interface RouteMatch {
     status: 200 | 301 | 404;
@@ -163,15 +200,9 @@ async function startServer() {
   function resolveRoute(rawPath: string): RouteMatch {
     const cleanPath = rawPath.toLowerCase().replace(/\/+$/, "") || "/";
 
-    // 301 Permanent Redirects for legacy/alias routes
-    if (cleanPath === "/service-area/city/bonne-terre") {
-      return { status: 301, redirectUrl: "/bonne-terre-mo-bail-bonds--24/7-jail-release-services" };
-    }
-    if (cleanPath === "/service-area/city/ironton") {
-      return { status: 301, redirectUrl: "/ironton-bail-bonds-247-jail-release" };
-    }
-    if (cleanPath === "/felony-bail-bonds") {
-      return { status: 301, redirectUrl: "/" };
+    // 301 Permanent Redirects for shortcuts and aliases
+    if (CITY_SHORTCUTS[cleanPath]) {
+      return { status: 301, redirectUrl: CITY_SHORTCUTS[cleanPath] };
     }
 
     // 200 OK Valid Routes
@@ -185,13 +216,19 @@ async function startServer() {
       return { status: 200, canonicalUrl: "https://jstorybailbonds.com/ironton-bail-bonds-247-jail-release" };
     }
 
+    const trimmedPath = cleanPath.startsWith("/") ? cleanPath.slice(1) : cleanPath;
+    if (STANDARD_SITE_ROUTES.has(trimmedPath)) {
+      return { status: 200, canonicalUrl: `https://jstorybailbonds.com/${trimmedPath}` };
+    }
+
     if (cleanPath.startsWith("/service-area/city/")) {
       const cityId = cleanPath.substring("/service-area/city/".length);
       if (VALID_CITIES.has(cityId) && cityId !== 'bonne-terre' && cityId !== 'ironton') {
         return { status: 200, canonicalUrl: `https://jstorybailbonds.com/service-area/city/${cityId}` };
       }
     } else if (cleanPath.startsWith("/service-area/")) {
-      const countyId = cleanPath.substring("/service-area/".length);
+      let countyId = cleanPath.substring("/service-area/".length);
+      countyId = countyId.replace(/-county$/, '');
       if (VALID_COUNTIES.has(countyId)) {
         return { status: 200, canonicalUrl: `https://jstorybailbonds.com/service-area/${countyId}` };
       }
@@ -200,6 +237,7 @@ async function startServer() {
     // Any other URL is a genuine 404 (Not Found)
     return { status: 404 };
   }
+
 
   // Middleware to handle 301 redirects and attach route validation info
   app.use((req, res, next) => {
@@ -562,6 +600,111 @@ async function startServer() {
     }
   });
 
+  // Explicit handlers for crawler and AI search engine discovery files
+  app.get("/robots.txt", (req, res) => {
+    const robotsPath = path.join(process.cwd(), "public", "robots.txt");
+    if (fs.existsSync(robotsPath)) {
+      res.setHeader("Content-Type", "text/plain; charset=utf-8");
+      res.setHeader("Cache-Control", "public, max-age=86400");
+      return res.sendFile(robotsPath);
+    }
+    res.status(404).send("User-agent: *\nAllow: /\nSitemap: https://jstorybailbonds.com/sitemap.xml");
+  });
+
+  app.get("/sitemap.xml", (req, res) => {
+    const sitemapPath = path.join(process.cwd(), "public", "sitemap.xml");
+    if (fs.existsSync(sitemapPath)) {
+      res.setHeader("Content-Type", "application/xml; charset=utf-8");
+      res.setHeader("Cache-Control", "public, max-age=86400");
+      return res.sendFile(sitemapPath);
+    }
+    res.status(404).send("<!-- Sitemap not found -->");
+  });
+
+  app.get("/llms.txt", (req, res) => {
+    const llmsPath = path.join(process.cwd(), "public", "llms.txt");
+    if (fs.existsSync(llmsPath)) {
+      res.setHeader("Content-Type", "text/plain; charset=utf-8");
+      res.setHeader("Cache-Control", "public, max-age=86400");
+      return res.sendFile(llmsPath);
+    }
+    res.status(404).send("# Jody Story Bail Bonds\n> 24/7 Missouri Bail Bond Services");
+  });
+
+  app.get("/llms-full.txt", (req, res) => {
+    const llmsFullPath = path.join(process.cwd(), "public", "llms-full.txt");
+    if (fs.existsSync(llmsFullPath)) {
+      res.setHeader("Content-Type", "text/plain; charset=utf-8");
+      res.setHeader("Cache-Control", "public, max-age=86400");
+      return res.sendFile(llmsFullPath);
+    }
+    res.status(404).send("# Jody Story Bail Bonds\n> 24/7 Missouri Bail Bond Services Full Documentation");
+  });
+
+  function injectSeoIntoHtml(html: string, rawPath: string, routeMatch: RouteMatch): string {
+    if (routeMatch.status === 404) {
+      const noindexTag = `<meta name="robots" content="noindex, nofollow" />`;
+      html = html.replace(/<title[^>]*>.*?<\/title>/i, '<title>Page Not Found (404) | Jody Story Bail Bonds</title>');
+      html = html.replace(/<meta\s+[^>]*name=["']description["'][^>]*>/i, '<meta name="description" content="The page you requested could not be found." />');
+      html = html.replace(/<link\s+[^>]*rel=["']canonical["'][^>]*>\s*/gi, '');
+      html = html.replace(/<meta\s+[^>]*property=["']og:[^"']*["'][^>]*>\s*/gi, '');
+      html = html.replace(/<meta\s+[^>]*name=["']twitter:[^"']*["'][^>]*>\s*/gi, '');
+      html = html.replace('</head>', `  ${noindexTag}\n  </head>`);
+      return html;
+    }
+
+    const seo = getSeoForPath(rawPath);
+    if (seo) {
+      // 1. Replace title
+      html = html.replace(/<title[^>]*>.*?<\/title>/i, `<title>${seo.title}</title>`);
+
+      // 2. Replace or inject description
+      if (/<meta\s+[^>]*name=["']description["'][^>]*>/i.test(html)) {
+        html = html.replace(/<meta\s+[^>]*name=["']description["'][^>]*>/i, `<meta name="description" content="${seo.description}" />`);
+      } else {
+        html = html.replace('</head>', `  <meta name="description" content="${seo.description}" />\n  </head>`);
+      }
+
+      // 3. Replace keywords if present
+      if (/<meta\s+[^>]*name=["']keywords["'][^>]*>/i.test(html)) {
+        html = html.replace(/<meta\s+[^>]*name=["']keywords["'][^>]*>/i, `<meta name="keywords" content="${seo.keywords}" />`);
+      }
+
+      // 4. Strip existing static OG, Twitter, canonical, and Schema tags to prevent duplicate meta
+      html = html.replace(/<meta\s+[^>]*property=["']og:[^"']*["'][^>]*>\s*/gi, '');
+      html = html.replace(/<meta\s+[^>]*name=["']twitter:[^"']*["'][^>]*>\s*/gi, '');
+      html = html.replace(/<link\s+[^>]*rel=["']canonical["'][^>]*>\s*/gi, '');
+
+      // 5. Build rich dynamic SEO tag set
+      const seoTags = [
+        `<link rel="canonical" href="${seo.canonicalUrl}" data-static="true" />`,
+        `<meta property="og:title" content="${seo.ogTitle}" />`,
+        `<meta property="og:description" content="${seo.ogDescription}" />`,
+        `<meta property="og:url" content="${seo.ogUrl}" />`,
+        `<meta property="og:type" content="website" />`,
+        `<meta property="og:image" content="${seo.ogImage}" />`,
+        `<meta name="twitter:card" content="summary_large_image" />`,
+        `<meta name="twitter:title" content="${seo.twitterTitle}" />`,
+        `<meta name="twitter:description" content="${seo.twitterDescription}" />`,
+        `<meta name="twitter:image" content="${seo.twitterImage}" />`,
+        `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@graph": seo.schemaGraph })}</script>`
+      ].join('\n  ');
+
+      html = html.replace('</head>', `  ${seoTags}\n  </head>`);
+
+      // 6. Inject semantic HTML fallback for crawlers inside <div id="root">
+      if (seo.htmlFallback && html.includes('<div id="root"></div>')) {
+        html = html.replace('<div id="root"></div>', `<div id="root">${seo.htmlFallback}</div>`);
+      }
+    } else if (routeMatch.canonicalUrl) {
+      html = html.replace(/<link\s+[^>]*rel=["']canonical["'][^>]*>\s*/gi, '');
+      const canonicalTag = `<link rel="canonical" href="${routeMatch.canonicalUrl}" data-static="true" />`;
+      html = html.replace('</head>', `  ${canonicalTag}\n  </head>`);
+    }
+
+    return html;
+  }
+
   // Vite middleware for development
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
@@ -597,16 +740,12 @@ async function startServer() {
         if (routeMatch.status === 404) {
           res.status(404);
           res.setHeader("X-Robots-Tag", "noindex, nofollow");
-          const noindexTag = `<meta name="robots" content="noindex, nofollow" />`;
-          template = template.replace('</head>', `  ${noindexTag}\n  </head>`);
         } else {
           res.status(200);
-          res.setHeader("X-Robots-Tag", "index, follow");
-          if (routeMatch.canonicalUrl) {
-            const canonicalTag = `<link rel="canonical" href="${routeMatch.canonicalUrl}" data-static="true" />`;
-            template = template.replace('</head>', `  ${canonicalTag}\n  </head>`);
-          }
+          res.setHeader("X-Robots-Tag", "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1");
         }
+
+        template = injectSeoIntoHtml(template, req.path, routeMatch);
 
         res.setHeader("Content-Type", "text/html");
         res.setHeader("Cache-Control", "no-store");
@@ -643,22 +782,12 @@ async function startServer() {
         res.setHeader("X-Robots-Tag", "noindex, nofollow");
       } else {
         res.status(200);
-        res.setHeader("X-Robots-Tag", "index, follow");
+        res.setHeader("X-Robots-Tag", "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1");
       }
 
       try {
         let html = fs.readFileSync(path.join(distPath, 'index.html'), 'utf-8');
-        
-        if (routeMatch.status === 200 && routeMatch.canonicalUrl) {
-          // Inject dynamic canonical tag for valid 200 pages
-          const canonicalTag = `<link rel="canonical" href="${routeMatch.canonicalUrl}" data-static="true" />`;
-          html = html.replace('</head>', `  ${canonicalTag}\n  </head>`);
-        } else if (routeMatch.status === 404) {
-          // Ensure search engines do not index 404 pages
-          const noindexTag = `<meta name="robots" content="noindex, nofollow" />`;
-          html = html.replace('</head>', `  ${noindexTag}\n  </head>`);
-        }
-        
+        html = injectSeoIntoHtml(html, req.path, routeMatch);
         res.send(html);
       } catch (e) {
         res.sendFile(path.join(distPath, 'index.html'));

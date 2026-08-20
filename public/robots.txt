@@ -2,10 +2,38 @@
 User-agent: *
 Allow: /
 
-# Explicitly allow Google, Bing, and major AI Answer Engine scrapers (AEO)
+# Major Search Engine Crawlers
 User-agent: Googlebot
 Allow: /
 
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: msnbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# AI Answer Engines & LLM Crawlers (AEO / GEO / Generative Search)
 User-agent: Google-Extended
 Allow: /
 
@@ -15,18 +43,41 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
 Allow: /
 
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: Applebot
+User-agent: Bytespider
 Allow: /
 
-User-agent: Bingbot
+User-agent: CCBot
 Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# LLM Documentation Directives
+# See /llms.txt and /llms-full.txt for AI Search indexing data
 
 # Sitemap Directive
 Sitemap: https://jstorybailbonds.com/sitemap.xml
-

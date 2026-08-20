@@ -20,6 +20,7 @@ export const counties: County[] = [
   { id: 'wayne', name: 'Wayne County', circuit: 'Circuit 42', description: 'Securing release in Greenville and Wayne County courts.', lat: 37.12, lng: -90.45 },
   { id: 'reynolds', name: 'Reynolds County', circuit: 'Circuit 42', description: 'Serving Centerville and Reynolds County with professional care.', lat: 37.44, lng: -90.95 },
   { id: 'stoddard', name: 'Stoddard County', circuit: 'Circuit 35', description: '24/7 bail bond support in Bloomfield, Dexter, and Stoddard County.', lat: 36.88, lng: -89.92 },
-  { id: 'dunklin', name: 'Dunklin County', circuit: 'Circuit 35', description: 'Fast bail release in Kennett, Malden, and Dunklin County.', lat: 36.23, lng: -90.05 },
+  { id: 'dunklin', name: 'Dunklin County', circuit: 'Circuit 35', description: 'Fast bail release in Kennett, Malden, and Dunklin County.', lat: 36.23, lng: -90.05 }
 ];
+
 
